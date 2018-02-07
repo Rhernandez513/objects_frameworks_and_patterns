@@ -8,6 +8,7 @@ public class facility {
     private String name;
     private int capacity;
     private String detail;
+    private String InspectionDetails;
     private List<facility> facilities_under_management;
 
 
@@ -34,6 +35,14 @@ public class facility {
     public String getDetail() {
         return detail;
     }
+
+    public void setInspectionDetails(String InspectionDetails) {
+        this.InspectionDetails = InspectionDetails;
+    }
+    public String getInspectionDetails() {
+        return this.InspectionDetails;
+    }
+
     // Facility
     //    this will cover the
     //    functionalities such as adding a new facility to
@@ -76,7 +85,10 @@ public class facility {
 // Facility Use
 public class facility_use {
 
+    private int total_usage = 50;
+    private int current_usage = 0;
     private facility Facility;
+    private ArrayList<facility> Inspections = new ArrayList<facility>();
     private ArrayList<facility> facilities_in_use = new ArrayList<facility>();
 
 
@@ -86,10 +98,27 @@ public class facility_use {
     public Object assignFacilityToUse(facility facility) {
         facilities_in_use.add(facility);
     }
-    public Object vacateFacility() { }
-    public Object listInspections() { }
-    public Object listActualUsage() { }
-    public Object calcUsageRate() { }
+    public Object vacateFacility() {
+        System.out.println("Kicking out tenants...");
+        return null;
+    }
+
+    public Object listInspections() {
+        int counter = 1;
+        for(facility fac: Inspections) {
+            System.out.println("Inspection result: " + counter);
+            counter += 1;
+        }
+        return counter;
+    }
+    public Object listActualUsage() {
+        return total_usage - current_usage;
+    }
+    public Object calcUsageRate() {
+        int percentage_in_use = current_usage / total_usage;
+        String percentage = percentage_in_use + "%";
+        return percentage;
+    }
 }
 
 public class facility_maintenance {
@@ -106,14 +135,15 @@ public class facility_maintenance {
     //    scheduling  a  facility  for  maintenance;  checking  maintenance  status;  listing  maintenance
     //    requests; calculating down time of a facility and many more functionalities.
     public Object makeFacilityMaintRequest() { }
-    // use date objects
+
     public Object scheduleMaintenance(facility Facility) {
         Date now = new Date();
         facilities_under_maintenance.put(Facility, now);
     }
     public Object calcMaintenanceCostForFacility(facility Facility) {
-        if ( facilities_under_maintenance.containsKey(Facility)) {
+        if (facilities_under_maintenance.containsKey(Facility)) {
             System.out.println("True, can calculate maintenance costs");
+
         } else {
             System.out.println("False, facility not under maintenance");
         }
@@ -121,7 +151,6 @@ public class facility_maintenance {
     public Object calcProblemRateForFacility() { }
     public Object calcDownTimeForFacility() { }
     public Object listMaintRequests() { }
-    public Object listMaintenance() {
-
+    public Object listMaintenance() {}
     public Object listFacilityProblems() { }
 }
