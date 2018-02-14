@@ -4,8 +4,8 @@ import java.util.*;
 
 public class FacilityMaintenance {
 
-    private io.roberthernandez.Facility Facility;
-    private Map<io.roberthernandez.Facility, Date> facilities_under_maintenance = new HashMap<io.roberthernandez.Facility, Date>();
+    private Facility facility;
+    private Map<Facility, Date> facilities_under_maintenance = new HashMap<Facility, Date>();
     private Date maint_start_date = new Date();
     private int cost_for_maintenance_in_dollars = 0;
 
@@ -17,12 +17,12 @@ public class FacilityMaintenance {
     //    requests; calculating down time of a Facility and many more functionalities.
     public Object makeFacilityMaintRequest() { }
 
-    public Object scheduleMaintenance(io.roberthernandez.Facility Facility) {
+    public Object scheduleMaintenance(Facility facility) {
         Date now = new Date();
-        facilities_under_maintenance.put(Facility, now);
+        facilities_under_maintenance.put(facility, now);
     }
-    public Object calcMaintenanceCostForFacility(io.roberthernandez.Facility Facility) {
-        if (facilities_under_maintenance.containsKey(Facility)) {
+    public Object calcMaintenanceCostForFacility(Facility facility) {
+        if (facilities_under_maintenance.containsKey(facility)) {
             System.out.println("True, can calculate maintenance costs");
 
         } else {
