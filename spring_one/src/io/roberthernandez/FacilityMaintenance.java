@@ -2,7 +2,7 @@ package io.roberthernandez;
 
 import java.util.*;
 
-public class facility_maintenance {
+public class FacilityMaintenance {
 
     private io.roberthernandez.Facility Facility;
     private Map<io.roberthernandez.Facility, Date> facilities_under_maintenance = new HashMap<io.roberthernandez.Facility, Date>();
