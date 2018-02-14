@@ -49,8 +49,8 @@ public class Facility {
     //    the number and capacity of facilities and their current statuses.
     // create List<T>
     public Object listFacilities(){
-        for(io.roberthernandez.Facility Facility: facilities_under_management) {
-            System.out.println(Facility.name);
+        for(Facility facility: facilities_under_management) {
+            System.out.println(facility.name);
         }
     }
     public Object getFacilityInformation() {
@@ -64,15 +64,15 @@ public class Facility {
         return capacity;
     }
     // Add / remove from List<T> etc
-    public Object addNewFacility(Facility Facility) {
-        facilities_under_management.add(Facility);
+    public Object addNewFacility(Facility facility) {
+        facilities_under_management.add(facility);
         capacity -= 1;
         return true;
     }
 
     public void addFacilityDetail() { }
-    public Object removeFacility(Facility Facility) {
-        boolean result = facilities_under_management.remove(Facility);
+    public Object removeFacility(Facility facility) {
+        boolean result = facilities_under_management.remove(facility);
         if (result) {
             capacity += 1;
             return true;
