@@ -7,16 +7,16 @@ public class FacilityUse {
 
     private int total_usage = 50;
     private int current_usage = 0;
-    private facility Facility;
-    private ArrayList<facility> Inspections = new ArrayList<facility>();
-    private ArrayList<facility> facilities_in_use = new ArrayList<facility>();
+    private io.roberthernandez.Facility Facility;
+    private ArrayList<io.roberthernandez.Facility> Inspections = new ArrayList<io.roberthernandez.Facility>();
+    private ArrayList<io.roberthernandez.Facility> facilities_in_use = new ArrayList<io.roberthernandez.Facility>();
 
 
-    //    this  covers  the  functionalities  of  managing  the  facility  such  as  reserving  a
-    //    facility; the cost of using and maintaining it; assigning and de-assigning a facility for use.
+    //    this  covers  the  functionalities  of  managing  the  Facility  such  as  reserving  a
+    //    Facility; the cost of using and maintaining it; assigning and de-assigning a Facility for use.
     public Object isInUseDuringInterval() { }
-    public Object assignFacilityToUse(facility facility) {
-        facilities_in_use.add(facility);
+    public Object assignFacilityToUse(io.roberthernandez.Facility Facility) {
+        facilities_in_use.add(Facility);
     }
     public Object vacateFacility() {
         System.out.println("Kicking out tenants...");
@@ -25,7 +25,7 @@ public class FacilityUse {
 
     public Object listInspections() {
         int counter = 1;
-        for(facility fac: Inspections) {
+        for(io.roberthernandez.Facility fac: Inspections) {
             System.out.println("Inspection result: " + counter);
             counter += 1;
         }

@@ -1,6 +1,6 @@
 package io.roberthernandez;
 
 public class MaintenanceRequest {
-    private facility facility;
+    private Facility Facility;
     private User user;
 }
