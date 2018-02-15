@@ -1,0 +1,62 @@
+package io.roberthernandez;
+
+import java.util.ArrayList;
+
+public class MaintenanceManangement {
+
+    private ArrayList<Maintenance> maint = new ArrayList<Maintenance>();
+
+
+    public long calcDownTimeForFacility(Facility facility) {
+       long timeDeltaAsUnix = 0 ;
+
+       for (Maintenance maintenance : maint) {
+           Facility f_one = maintenance.getRequest().getFacility();
+           if (facility == f_one) {
+               Schedule s = maintenance.getSchedule();
+               long period_begin = s.getStartTime().getTime() / 1000;
+               long period_end = s.getEndTime().getTime() / 1000;
+               timeDeltaAsUnix += period_end - period_begin;
+           }
+       }
+       return timeDeltaAsUnix;
+    }
+
+    public Object calcProblemRateForFacility(Maintenance maintenance, int ExpectedPerformance) {
+        int length = 0;
+        for (Maintenance main: maint) {
+            if (main == maintenance) {
+                length = main.getLenghtOfProblemReport();
+            }
+        }
+        double percentage = length / ExpectedPerformance;
+        return percentage;
+    }
+
+    public Object calcMaintenanceCostForFacility(Facility facility) {
+
+        double cost = 0;
+
+        for (Maintenance main : maint) {
+            if (main.getRequest().getFacility() == facility) {
+                System.out.println("True, can calculate maintenance costs");
+                cost += main.getCost();
+            }
+        }
+        return cost;
+    }
+
+    public Object listMaintRequests() {
+        for (Maintenance main: maint) {
+            System.out.println(main.getRequest());
+        }
+        return null;
+    }
+
+    public Object listMaintenance() {
+        for (Maintenance main : maint) {
+            System.out.println(main);
+        }
+        return null;
+    }
+}

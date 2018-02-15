@@ -13,7 +13,7 @@ public class mainapp {
         MaintenanceRequest request = new MaintenanceRequest();
 
         request.setFacility(facility_one);
-        request.setUser(user_one);;
+        request.setUser(user_one);
 
         System.out.println("Now that the request is created we should be able to send it to the manangement system for scheduling");
 //        request.send();
@@ -21,6 +21,10 @@ public class mainapp {
         System.out.println("In order to schedule we need a start and end time");
 
         Schedule schedule = createSchedule();
+
+
+        int TimesFacilitiesShouldBeInUse = 10;
+
 
     }
     public static Schedule createSchedule() {

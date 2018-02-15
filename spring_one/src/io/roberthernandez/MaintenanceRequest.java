@@ -19,4 +19,11 @@ public class MaintenanceRequest {
     public User getUser() {
         return user;
     }
+
+    public String toString() {
+        String response = "";
+        response += "User that created this request: " + user + "\n";
+        response += "Facility Request created on: " + facility + "\n";
+        return response;
+    }
 }

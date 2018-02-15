@@ -1,31 +1,41 @@
 package io.roberthernandez;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 // Facility Use
-public class FacilityUse {
+public class Usage {
 
     private int total_usage = 50;
     private int current_usage = 0;
     private Facility facility;
     private ArrayList<Facility> Inspections = new ArrayList<io.roberthernandez.Facility>();
-    private ArrayList<Facility> facilities_in_use = new ArrayList<io.roberthernandez.Facility>();
+    private ArrayList<Facility> facilities_in_use = new ArrayList<Facility>();
+    private boolean isInUse = false;
+    private User user;
+    private Schedule schedule;
 
 
-    //    this  covers  the  functionalities  of  managing  the  Facility  such  as  reserving  a
-    //    Facility; the cost of using and maintaining it; assigning and de-assigning a Facility for use.
-    public Object isInUseDuringInterval() { }
+    // returns true if the date is inclusive in the scheduled usage time
+    public Object isInUseDuringInterval(Date date) {
+        Date startTime = schedule.getStartTime();
+        Date endTime = schedule.getEndTime();
+        return startTime.compareTo(date) * date.compareTo(endTime) >= 0;
+    }
+
     public Object assignFacilityToUse(Facility facility) {
         facilities_in_use.add(facility);
+        return null;
     }
     public Object vacateFacility() {
         System.out.println("Kicking out tenants...");
+        facilities_in_use = null;
         return null;
     }
 
     public Object listInspections() {
         int counter = 1;
-        for(io.roberthernandez.Facility fac: Inspections) {
+        for(Facility fac: Inspections) {
             System.out.println("Inspection result: " + counter);
             counter += 1;
         }

@@ -5,7 +5,6 @@ import java.util.*;
 public class FacilityMaintenance {
 
     private Facility facility;
-    private Map<Facility, Date> facilities_under_maintenance = new HashMap<Facility, Date>();
     private Date maint_start_date = new Date();
     private int cost_for_maintenance_in_dollars = 0;
 
@@ -15,23 +14,30 @@ public class FacilityMaintenance {
     //    maintenance  of  a  Facility  such  as
     //    scheduling  a  Facility  for  maintenance;  checking  maintenance  status;  listing  maintenance
     //    requests; calculating down time of a Facility and many more functionalities.
-    public Object makeFacilityMaintRequest() { }
-
-    public Object scheduleMaintenance(Facility facility) {
-        Date now = new Date();
-        facilities_under_maintenance.put(facility, now);
+    public Object makeFacilityMaintRequest() {
+        return null;
     }
-    public Object calcMaintenanceCostForFacility(Facility facility) {
-        if (facilities_under_maintenance.containsKey(facility)) {
-            System.out.println("True, can calculate maintenance costs");
 
-        } else {
-            System.out.println("False, Facility not under maintenance");
-        }
+//    public Object scheduleMaintenance(Facility facility) {
+//        Date now = new Date();
+//        facilities_under_maintenance.put(facility, now);
+//        System.out.print("Maintenance scheduled for: ");
+//        System.out.println(now.getTime());
+//        return now;
+//    }
+    public Object calcProblemRateForFacility() {
+        return null;
     }
-    public Object calcProblemRateForFacility() { }
-    public Object calcDownTimeForFacility() { }
-    public Object listMaintRequests() { }
-    public Object listMaintenance() {}
-    public Object listFacilityProblems() { }
+    public Object calcDownTimeForFacility() {
+        return null;
+    }
+    public Object listMaintRequests() {
+        return null;
+    }
+    public Object listMaintenance() {
+        return null;
+    }
+    public Object listFacilityProblems() {
+        return null;
+    }
 }

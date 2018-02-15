@@ -27,5 +27,8 @@ public class User {
     }
 
 
-    public String toString() { }
+    public String toString() {
+        String response = getUsername();
+        return response;
+    }
 }

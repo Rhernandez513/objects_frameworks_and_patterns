@@ -6,6 +6,13 @@ public class Schedule {
     private Date StartTime;
     private Date EndTime;
 
+    public String toString() {
+        String response = "";
+        response += "Start Time: " + this.StartTime.toString();
+        response += "End Time: " + this.EndTime.toString();
+        return response;
+    }
+
     public void setStartTime(Date time) {
         this.StartTime = time;
     }
