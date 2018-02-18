@@ -20,6 +20,17 @@ public class Usage {
         return facility;
     }
 
+    public void setFacility(Facility f){
+        this.facility=f;
+    }
+    public void setUser(User u){
+        this.user=u;
+    }
+
+    public void setSchedule(Schedule s){
+        this.schedule=s;
+    }
+
     // returns true if the date is inclusive in the scheduled usage time
     public Object isInUseDuringInterval(Date date) {
         Date startTime = schedule.getStartTime();
