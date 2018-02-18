@@ -17,10 +17,85 @@ public class mainapp {
         testAddFacilityDetail();
         testRemoveFacility();
         testIsInUseDuringInterval();
+        testAssignFacilityToUse();
+        testVacateFacility();
+        testListActualUsage();
 
 
     }
 
+    public static void testListActualUsage() {
+        System.out.print("Test List Actual Usage: ");
+        User user_one = new User();
+        user_one.setUserID(1);
+        user_one.setUsername("Robert");
+        user_one.setContactInfo("rhernandez3@luc.edu");
+
+        Facility facility_one = new Facility();
+        facility_one.setCapacity(50);
+        facility_one.setName("Loyola Damen");
+
+
+
+        Usage use=new Usage();
+        use.setUser(user_one);
+
+        use.setFacility(facility_one);
+
+        use.assignFacilityToUse(use.getFacility());
+
+        UsageManagement management = new UsageManagement();
+        management.AddUsage(use);
+        System.out.print("Acutal Usage: ");
+        management.listActualUsage(use.getFacility());
+    }
+
+    public static void testVacateFacility() {
+        System.out.print("Test Vacate Facility: ");
+        User user_one = new User();
+        user_one.setUserID(1);
+        user_one.setUsername("Robert");
+        user_one.setContactInfo("rhernandez3@luc.edu");
+
+        Facility facility_one = new Facility();
+        facility_one.setCapacity(50);
+        facility_one.setName("Loyola Damen");
+
+
+
+        Usage use=new Usage();
+        use.setUser(user_one);
+
+        use.setFacility(facility_one);
+
+        use.assignFacilityToUse(use.getFacility());
+        use.vacateFacility();
+        // facilities in use will be null now
+    }
+
+    public static void testAssignFacilityToUse() {
+        System.out.println("Test Assign Facility To Use: ");
+
+        User user_one = new User();
+        user_one.setUserID(1);
+        user_one.setUsername("Robert");
+        user_one.setContactInfo("rhernandez3@luc.edu");
+
+        Facility facility_one = new Facility();
+        facility_one.setCapacity(50);
+        facility_one.setName("Loyola Damen");
+
+
+
+        Usage use=new Usage();
+        use.setUser(user_one);
+
+        use.setFacility(facility_one);
+
+        use.assignFacilityToUse(use.getFacility());
+
+
+    }
     public static void testIsInUseDuringInterval() {
         User user_one = new User();
         user_one.setUserID(1);

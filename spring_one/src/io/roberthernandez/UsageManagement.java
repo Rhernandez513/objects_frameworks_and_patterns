@@ -3,7 +3,7 @@ package io.roberthernandez;
 import java.util.ArrayList;
 
 public class UsageManagement {
-    private ArrayList<Usage> Usages;
+    private ArrayList<Usage> Usages = new ArrayList<Usage>();
 
     public void AddUsage(Usage u) {
         this.Usages.add(u);
