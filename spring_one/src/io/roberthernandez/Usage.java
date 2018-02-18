@@ -6,15 +6,19 @@ import java.util.Date;
 // Facility Use
 public class Usage {
 
-    private int total_usage = 50;
-    private int current_usage = 0;
+    private int min_capacity = 0;
+    private int reservations = 10;
+    private int max_capacity = 50;
     private Facility facility;
-    private ArrayList<Facility> Inspections = new ArrayList<io.roberthernandez.Facility>();
+//    private ArrayList<Facility> Inspections = new ArrayList<io.roberthernandez.Facility>();
     private ArrayList<Facility> facilities_in_use = new ArrayList<Facility>();
     private boolean isInUse = false;
     private User user;
     private Schedule schedule;
 
+    public Facility getFacility() {
+        return facility;
+    }
 
     // returns true if the date is inclusive in the scheduled usage time
     public Object isInUseDuringInterval(Date date) {
@@ -33,19 +37,19 @@ public class Usage {
         return null;
     }
 
-    public Object listInspections() {
-        int counter = 1;
-        for(Facility fac: Inspections) {
-            System.out.println("Inspection result: " + counter);
-            counter += 1;
-        }
-        return counter;
-    }
+//    public Object listInspections() {
+//        int counter = 1;
+//        for(Facility fac: Inspections) {
+//            System.out.println("Inspection result: " + counter);
+//            counter += 1;
+//        }
+//        return counter;
+//    }
     public Object listActualUsage() {
-        return total_usage - current_usage;
+        return reservations;
     }
     public Object calcUsageRate() {
-        int percentage_in_use = current_usage / total_usage;
+        double percentage_in_use = reservations / max_capacity;
         String percentage = percentage_in_use + "%";
         return percentage;
     }

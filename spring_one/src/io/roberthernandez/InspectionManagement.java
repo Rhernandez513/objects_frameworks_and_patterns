@@ -8,4 +8,12 @@ public class InspectionManagement {
     public ArrayList<Inspection> getInspectionArrayList() {
         return inspectionArrayList;
     }
+
+    public Object listInspections() {
+        int counter = 1;
+        for (Inspection inspection : inspectionArrayList) {
+            System.out.println(counter + ": " + inspection);
+        }
+        return null;
+    }
 }

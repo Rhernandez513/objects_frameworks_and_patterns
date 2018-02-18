@@ -3,21 +3,31 @@ package io.roberthernandez;
 import java.util.ArrayList;
 
 public class UsageManagement {
-    private ArrayList<Facility> Facilities;
+    private ArrayList<Usage> Usages;
 
-    public void AddFacility(Facility f) {
-        this.Facilities.add(f);
+    public void AddUsage(Usage u) {
+        this.Usages.add(u);
     }
-    public void RemoveFacility(Facility f) {
-        if (this.Facilities.contains(f)) {
-            this.Facilities.remove(f);
+    public void RemoveUsage(Usage u) {
+        if (this.Usages.contains(u)) {
+            this.Usages.remove(u);
         }
     }
 
-    public Object listFacilities(){
+    public Object listUsage(){
         int count = 1;
-        for (Facility f : Facilities) {
-            System.out.println(count + ": " + f);
+        for (Usage u : Usages) {
+            System.out.println(count + ": " + u);
+        }
+        return null;
+    }
+
+    public Object listActualUsage(Facility f) {
+        for(Usage u : Usages) {
+            Facility fac = u.getFacility();
+            if (f == fac) {
+                System.out.println(u.listActualUsage());
+            }
         }
         return null;
     }

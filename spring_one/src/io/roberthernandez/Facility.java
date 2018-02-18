@@ -36,34 +36,20 @@ public class Facility {
     //    be managed; removing a Facility from being managed; getting general information such as
     //    the number and capacity of facilities and their current statuses.
     // create List<T>
-    public Object getFacilityInformation() {
+    public String getFacilityInformation() {
 
         String response = "";
-        response += "Name: " + this.getName();
+        response += "Name: " + this.getName() + "\n";
         response += "Capacity: " + this.getCapacity();
-//        response += "Detail Information: " + this.getDetail();
         return response;
     }
 
-    public void addFacilityDetail() { }
+    public void addFacilityDetail(FacilityDetail f) {
+        this.facilityDetails.add(f);
+    }
 
     public Object requestAvailableCapacity() {
         System.out.println("Retrieving Capacity: " + capacity);
         return capacity;
     }
-    // Add / remove from List<T> etc
-//    public Object addNewFacility(Facility facility) {
-//        facilityDetails.add(facility);
-//        capacity -= 1;
-//        return true;
-//    }
-
-//    public Object removeFacility(Facility facility) {
-//        boolean result = facilityDetails.remove(facility);
-//        if (result) {
-//            capacity += 1;
-//            return true;
-//        }
-//        return false;
-//    }
 }
