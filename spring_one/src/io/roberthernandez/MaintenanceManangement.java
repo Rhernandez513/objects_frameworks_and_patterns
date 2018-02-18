@@ -6,6 +6,9 @@ public class MaintenanceManangement {
 
     private ArrayList<Maintenance> maint = new ArrayList<Maintenance>();
 
+    public void addMaintenanceToBeManaged(Maintenance maintenance) {
+        this.maint.add(maintenance);
+    }
 
     public long calcDownTimeForFacility(Facility facility) {
        long timeDeltaAsUnix = 0 ;
@@ -22,14 +25,17 @@ public class MaintenanceManangement {
        return timeDeltaAsUnix;
     }
 
-    public Object calcProblemRateForFacility(Maintenance maintenance, int ExpectedPerformance) {
-        int length = 0;
+    public double calcProblemRateForFacility(Maintenance maintenance, int ExpectedPerformance) {
+        if (ExpectedPerformance == 0) {
+           System.out.println("Perfect Performance expected, impossible.");
+        }
+        double length = 0.0;
         for (Maintenance main: maint) {
             if (main == maintenance) {
                 length = main.getLenghtOfProblemReport();
             }
         }
-        double percentage = length / ExpectedPerformance;
+        double percentage = (length / ExpectedPerformance) * 100.00;
         return percentage;
     }
 
