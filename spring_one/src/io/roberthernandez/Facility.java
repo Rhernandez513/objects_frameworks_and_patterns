@@ -7,7 +7,7 @@ public class Facility {
 
     private String name;
     private int capacity;
-    private ArrayList<FacilityDetail> facilityDetails;
+    private ArrayList<FacilityDetail> facilityDetails = new ArrayList<FacilityDetail>();
 
 
     public String toString() {
@@ -30,12 +30,10 @@ public class Facility {
         return capacity;
     }
 
-    // Facility
-    //    this will cover the
-    //    functionalities such as adding a new Facility to
-    //    be managed; removing a Facility from being managed; getting general information such as
-    //    the number and capacity of facilities and their current statuses.
-    // create List<T>
+    public ArrayList<FacilityDetail> getFacilityDetails() {
+        return facilityDetails;
+    }
+
     public String getFacilityInformation() {
 
         String response = "";
@@ -48,7 +46,8 @@ public class Facility {
         this.facilityDetails.add(f);
     }
 
-    public Object requestAvailableCapacity() {
+
+    public int requestAvailableCapacity() {
         System.out.println("Retrieving Capacity: " + capacity);
         return capacity;
     }

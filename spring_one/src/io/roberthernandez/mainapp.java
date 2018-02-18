@@ -1,5 +1,6 @@
 package io.roberthernandez;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -55,8 +56,52 @@ public class mainapp {
 
         testListFacilities();
         testGetFacilityInformation();
+        testRequestAvalibleCapacity();
+        testAddNewFacility();
+        testAddFacilityDetail();
 
 
+    }
+
+    public static void testAddFacilityDetail() {
+
+        Facility facility_one = new Facility();
+        facility_one.setName("Loyola Damen");
+        facility_one.setCapacity(50);
+
+        String detailString = "Located on Lake Shore Campus";
+        FacilityDetail detail = new FacilityDetail(detailString);
+
+        facility_one.addFacilityDetail(detail);
+        ArrayList<FacilityDetail> details = facility_one.getFacilityDetails();
+
+        for (FacilityDetail det : details)  {
+            System.out.print("Facility Detail: ");
+            System.out.println(det);
+        }
+    }
+
+    public static void testAddNewFacility() {
+
+        System.out.print("Test Add New Facility: ");
+        FacilityManagement management = new FacilityManagement();
+
+        Facility facility_one = new Facility();
+        facility_one.setName("Loyola Damen");
+        facility_one.setCapacity(50);
+
+        management.addFacility(facility_one);
+
+        management.listFacilities();
+
+    }
+
+    public static void testRequestAvalibleCapacity() {
+        Facility facility_one = new Facility();
+        facility_one.setName("Loyola Damen");
+        facility_one.setCapacity(50);
+
+        facility_one.requestAvailableCapacity();
     }
 
     public static void testGetFacilityInformation() {
