@@ -47,17 +47,17 @@ public class mainapp {
         user_one.setContactInfo("rhernandez3@luc.edu");
 
         User user_two = new User();
-        user_one.setUserID(2);
-        user_one.setUsername("Jun");
-        user_one.setContactInfo("jwei4@luc.edu");
+        user_two.setUserID(2);
+        user_two.setUsername("Jun");
+        user_two.setContactInfo("jwei4@luc.edu");
 
         Facility facility_one = new Facility();
         facility_one.setCapacity(100);
         facility_one.setName("Loyola Damen");
 
         Facility facility_two = new Facility();
-        facility_one.setCapacity(50);
-        facility_one.setName("Loyola Cuneo");
+        facility_two.setCapacity(50);
+        facility_two.setName("Loyola Cuneo");
 
         InspectionRequest ir1=new InspectionRequest(facility_one,user_one);
         InspectionRequest ir2 = new InspectionRequest(facility_two,user_two);

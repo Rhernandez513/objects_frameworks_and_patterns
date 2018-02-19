@@ -13,12 +13,11 @@ public class InspectionManagement {
         return inspectionArrayList;
     }
 
-    public Object listInspections() {
+    public void listInspections() {
         int counter = 1;
         for (Inspection inspection : inspectionArrayList) {
             System.out.println(counter + ": " + inspection);
             counter++;
         }
-        return null;
     }
 }
