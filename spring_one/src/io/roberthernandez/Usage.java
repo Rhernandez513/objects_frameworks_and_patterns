@@ -22,6 +22,11 @@ public class Usage {
 
     public void setFacility(Facility f){
         this.facility=f;
+        max_capacity=f.getCapacity();
+    }
+
+    public void setReservations(int n){
+        this.reservations=n;
     }
     public void setUser(User u){
         this.user=u;
@@ -29,6 +34,10 @@ public class Usage {
 
     public void setSchedule(Schedule s){
         this.schedule=s;
+    }
+
+    public int getMax_capacity(){
+        return max_capacity;
     }
 
     // returns true if the date is inclusive in the scheduled usage time
@@ -60,7 +69,7 @@ public class Usage {
         return reservations;
     }
     public Object calcUsageRate() {
-        double percentage_in_use = reservations / max_capacity;
+        double percentage_in_use = reservations / (double)max_capacity *100;
         String percentage = percentage_in_use + "%";
         return percentage;
     }

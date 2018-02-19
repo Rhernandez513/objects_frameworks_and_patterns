@@ -25,18 +25,18 @@ public class MaintenanceManangement {
        return timeDeltaAsUnix;
     }
 
-    public double calcProblemRateForFacility(Maintenance maintenance, int ExpectedPerformance) {
+    public String calcProblemRateForFacility(Facility f, int ExpectedPerformance) {
         if (ExpectedPerformance == 0) {
            System.out.println("Perfect Performance expected, impossible.");
         }
         double length = 0.0;
         for (Maintenance main: maint) {
-            if (main == maintenance) {
-                length = main.getLenghtOfProblemReport();
+            if (main.getRequest().getFacility() == f) {
+                length += main.getLenghtOfProblemReport();
             }
         }
         double percentage = (length / ExpectedPerformance) * 100.00;
-        return percentage;
+        return (Double.toString(percentage)+"%");
     }
 
     public Object calcMaintenanceCostForFacility(Facility facility) {
@@ -45,7 +45,7 @@ public class MaintenanceManangement {
 
         for (Maintenance main : maint) {
             if (main.getRequest().getFacility() == facility) {
-                System.out.println("True, can calculate maintenance costs");
+                //System.out.println("True, can calculate maintenance costs");
                 cost += main.getCost();
             }
         }
@@ -65,4 +65,20 @@ public class MaintenanceManangement {
         }
         return null;
     }
+
+    public ArrayList<String> listFacilityProblems(Facility f){
+        ArrayList<String> problems = new ArrayList<String>();
+        for (Maintenance main : maint){
+            if(main.getRequest().getFacility()==f){
+                for (String s : main.maintProblemReports()){
+                    problems.add(s);
+                    System.out.println("Problem: " + s);
+                }
+            }
+        }
+
+        return problems;
+    }
+
+
 }

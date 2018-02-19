@@ -26,7 +26,7 @@ public class Maintenance {
 
     public String toString() {
         String response = "";
-        response += "Request: " + request + "\n";
+        response += "Request: " + request;
         response += "Scheduled for: " + schedule + "\n";
         response += "Cost: " + cost + "\n";
         return response;
@@ -54,5 +54,9 @@ public class Maintenance {
 
     public void setCost(double input) {
         this.cost = input;
+    }
+
+    public ArrayList<String> maintProblemReports(){
+        return problemReports;
     }
 }
