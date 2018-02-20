@@ -215,6 +215,7 @@ public class mainapp {
 
         System.out.print(mm.listMaintenance());
         System.out.println();
+        System.out.println();
 
     }
 
@@ -274,6 +275,7 @@ public class mainapp {
         mm.addMaintenanceToBeManaged(maint2);
 
         System.out.print(mm.listMaintRequests());
+        System.out.println();
         System.out.println();
 
     }
@@ -457,9 +459,7 @@ public class mainapp {
         System.out.print("The total cost of maintenances for " + facility_one + " is: ");
         System.out.println(mm.calcMaintenanceCostForFacility(facility_one));
 
-
-
-
+        System.out.println();
     }
 
 
@@ -504,7 +504,7 @@ public class mainapp {
 
 
     public static void testMakeMaintRequest(){
-        System.out.println("Test make maintenace request:");
+        System.out.println("Test make maintenance request:");
         User user_one = new User();
         user_one.setUserID(1);
         user_one.setUsername("Robert");
@@ -525,7 +525,7 @@ public class mainapp {
 
 
     public static void testcalFacilityUsageRate(){
-        System.out.print("Test calculation of facility usage rate: ");
+        System.out.println("Test calculation of facility usage rate");
         User user_one = new User();
         user_one.setUserID(1);
         user_one.setUsername("Robert");
@@ -552,11 +552,13 @@ public class mainapp {
         System.out.print("The usage rate is: ");
         System.out.println(use.calcUsageRate());
 
+        System.out.println();
+
 
     }
 
     public static void testListActualUsage() {
-        System.out.print("Test List Actual Usage: ");
+        System.out.println("Test List Actual Usage: ");
         User user_one = new User();
         user_one.setUserID(1);
         user_one.setUsername("Robert");
@@ -579,10 +581,12 @@ public class mainapp {
         management.AddUsage(use);
         System.out.print("Acutal Usage: ");
         management.listActualUsage(use.getFacility());
+
+        System.out.println();
     }
 
     public static void testVacateFacility() {
-        System.out.print("Test Vacate Facility: ");
+        System.out.println("Test Vacate Facility: ");
         User user_one = new User();
         user_one.setUserID(1);
         user_one.setUsername("Robert");
@@ -599,9 +603,14 @@ public class mainapp {
 
         use.setFacility(facility_one);
 
+        System.out.print("Before vacate: ");
         use.assignFacilityToUse(use.getFacility());
+
+        System.out.print("After vacate: ");
         use.vacateFacility();
         // facilities in use will be null now
+
+        System.out.println();
     }
 
     public static void testAssignFacilityToUse() {
@@ -620,13 +629,15 @@ public class mainapp {
 
         Usage use=new Usage();
         use.setUser(user_one);
-
         use.setFacility(facility_one);
 
         use.assignFacilityToUse(use.getFacility());
 
+        System.out.println();
 
     }
+
+
     public static void testIsInUseDuringInterval() {
         User user_one = new User();
         user_one.setUserID(1);
@@ -637,8 +648,6 @@ public class mainapp {
         facility_one.setCapacity(50);
         facility_one.setName("Loyola Damen");
 
-
-
         Date first_time = new Date();
         Calendar gcal = new GregorianCalendar();
         gcal.setTime(first_time);
@@ -646,6 +655,8 @@ public class mainapp {
         Date second_time = gcal.getTime();
         gcal.add(Calendar.SECOND, 4);
         Date third_time = gcal.getTime();
+        gcal.add(Calendar.SECOND, 4);
+        Date fourth_time = gcal.getTime();
 
 
         Schedule s=new Schedule();
@@ -653,17 +664,17 @@ public class mainapp {
         s.setStartTime(first_time);
         s.setEndTime(third_time);
 
-
-
         Usage use=new Usage();
         use.setUser(user_one);
         use.setSchedule(s);
         use.setFacility(facility_one);
 
-        System.out.print("Test Use interval: ");
+        System.out.print("Test Use interval(between interval): ");
         System.out.println(use.isInUseDuringInterval(second_time));
+        System.out.print("Test Use interval(outside interval): ");
+        System.out.println(use.isInUseDuringInterval(fourth_time));
 
-
+        System.out.println();
     }
 
     public static void testRemoveFacility() {
@@ -674,65 +685,118 @@ public class mainapp {
         facility_one.setName("Loyola Damen");
         facility_one.setCapacity(50);
 
+        Facility facility_two = new Facility();
+        facility_two.setName("Loyola Cuneo");
+        facility_two.setCapacity(30);
+
         management.addFacility(facility_one);
-        management.removeFacility(facility_one);
-        System.out.print("Should be blank: ");
+        management.addFacility(facility_two);
+        System.out.println("Before removing facility");
         management.listFacilities();
+
+        management.removeFacility(facility_one);
+
+        System.out.println("After removing one facility");
+        management.listFacilities();
+
+        management.removeFacility(facility_two);
+        System.out.println("After removing second facility(blank)");
+        management.listFacilities();
+
         System.out.println();
     }
 
     public static void testAddFacilityDetail() {
-        System.out.print("Test Add Facility Detail: ");
+        System.out.println("Test Add Facility Detail");
         Facility facility_one = new Facility();
         facility_one.setName("Loyola Damen");
         facility_one.setCapacity(50);
+        ArrayList<FacilityDetail> details = facility_one.getFacilityDetails();
 
+        System.out.println("Before adding facility detail:");
+
+        if (details.size()==0){
+            System.out.println("There is no detail of this facility");
+        }
+
+        else {
+
+            for (FacilityDetail det : details) {
+                System.out.println("Facility Detail: ");
+                System.out.println(det);
+            }
+        }
+
+        System.out.println("After adding facility detail:");
         String detailString = "Located on Lake Shore Campus";
         FacilityDetail detail = new FacilityDetail(detailString);
 
         facility_one.addFacilityDetail(detail);
-        ArrayList<FacilityDetail> details = facility_one.getFacilityDetails();
+        details = facility_one.getFacilityDetails();
 
-        for (FacilityDetail det : details)  {
-            System.out.print("Facility Detail: ");
-            System.out.println(det);
+        if (details.size()==0){
+            System.out.println("There is no detail of this facility");
         }
+
+        else {
+
+            for (FacilityDetail det : details) {
+                System.out.println("Facility Detail: ");
+                System.out.println(det);
+            }
+        }
+
+        System.out.println();
+
     }
 
     public static void testAddNewFacility() {
-        System.out.print("Test Add New Facility: ");
+        System.out.println("Test Add New Facility: ");
         FacilityManagement management = new FacilityManagement();
 
         Facility facility_one = new Facility();
         facility_one.setName("Loyola Damen");
         facility_one.setCapacity(50);
 
-        management.addFacility(facility_one);
+        Facility facility_two = new Facility();
+        facility_two.setName("Loyola Cuneo");
+        facility_two.setCapacity(30);
 
+        System.out.println("Add first facility and print:");
+        management.addFacility(facility_one);
         management.listFacilities();
+
+
+        System.out.println("Add second facility and print:");
+        management.addFacility(facility_two);
+        management.listFacilities();
+
+        System.out.println();
 
     }
 
     public static void testRequestAvalibleCapacity() {
-        System.out.print("Test Request Availible Capacity: ");
+        System.out.println("Test Request Availible Capacity: ");
         Facility facility_one = new Facility();
         facility_one.setName("Loyola Damen");
         facility_one.setCapacity(50);
 
         facility_one.requestAvailableCapacity();
+        System.out.println();
     }
 
     public static void testGetFacilityInformation() {
-        System.out.print("Test Get Facility Information: ");
+        System.out.println("Test Get Facility Information: ");
         Facility facility_one = new Facility();
         facility_one.setName("Loyola Damen");
         facility_one.setCapacity(50);
 
         System.out.println(facility_one.getFacilityInformation());
+        System.out.println();
     }
 
     public static void testListFacilities() {
-        System.out.print("Test List Facilities: ");
+        System.out.println("Test List Facilities: ");
         FacilityManagement management = new FacilityManagement();
 
         Facility facility_one = new Facility();
@@ -747,6 +811,8 @@ public class mainapp {
         management.addFacility(facility_two);
 
         management.listFacilities();
+
+        System.out.println();
     }
     public static Schedule createSchedule() {
         Date first_time = new Date();

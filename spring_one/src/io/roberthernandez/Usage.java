@@ -49,6 +49,9 @@ public class Usage {
 
     public Object assignFacilityToUse(Facility facility) {
         facilities_in_use.add(facility);
+        for(Facility f : facilities_in_use){
+            System.out.println(f + "is in use.");
+        }
         return null;
     }
     public Object vacateFacility() {

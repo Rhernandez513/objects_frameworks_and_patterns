@@ -8,7 +8,7 @@ public class Schedule {
 
     public String toString() {
         String response = "";
-        response += "Start Time: " + this.StartTime.toString();
+        response += "Start Time: " + this.StartTime.toString()+ "\t\t\t";
         response += "End Time: " + this.EndTime.toString();
         return response;
     }

@@ -53,17 +53,16 @@ public class MaintenanceManangement {
     }
 
     public Object listMaintRequests() {
+        ArrayList<MaintenanceRequest> mrList = new ArrayList<MaintenanceRequest>();
         for (Maintenance main: maint) {
-            System.out.println(main.getRequest());
+            mrList.add(main.getRequest());
         }
-        return null;
+        return mrList;
     }
 
     public Object listMaintenance() {
-        for (Maintenance main : maint) {
-            System.out.println(main);
-        }
-        return null;
+
+        return maint;
     }
 
     public ArrayList<String> listFacilityProblems(Facility f){
