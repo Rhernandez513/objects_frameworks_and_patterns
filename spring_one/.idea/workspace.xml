@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef524c51-910f-43d3-b1fc-2cff3f8c8665" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_3_2_18_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_3_2_18_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/app-context.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/FacilManag/Facility.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/FacilManag/FacilityDetail.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/FacilManag/FacilityManagement.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/InspecManag/Inspection.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/InspecManag/InspectionManagement.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/InspecManag/InspectionRequest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/InspecManag/InspectionRequestImp.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/MaintManag/Maintenance.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/MaintManag/MaintenanceManangement.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/MaintManag/MaintenanceRequest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/ScheManag/Schedule.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/UsageManag/Usage.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/UsageManag/UsageManagement.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/UserManag/User.java" />
-      <change beforePath="$PROJECT_DIR$/../BookStore/BookStore.iml" afterPath="$PROJECT_DIR$/../BookStore/BookStore.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_14_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_4_3_14_RELEASE.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/spring_one.iml" afterPath="$PROJECT_DIR$/spring_one.iml" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/Facility.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/FacilManag/FacilityImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/FacilityDetail.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/FacilManag/FacilityDetailImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/FacilityManagement.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/FacilManag/FacilityManagementImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/Inspection.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/InspecManag/InspectionImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/InspectionManagement.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/InspecManag/InspectionManagementImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/InspectionRequest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/Maintenance.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/MaintManag/MaintenanceImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/MaintenanceManangement.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/MaintManag/MaintenanceManangementImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/MaintenanceRequest.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/MaintManag/MaintenanceRequestImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/Schedule.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/ScheManag/ScheduleImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/Usage.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/UsageManag/UsageImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/UsageManagement.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/UsageManag/UsageManagementImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/User.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Model/UserManag/UserImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/io/roberthernandez/mainapp.java" afterPath="$PROJECT_DIR$/src/io/roberthernandez/Service/mainapp.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -553,8 +517,16 @@
       <workItem from="1516986912440" duration="4209000" />
       <workItem from="1517367348382" duration="1889000" />
       <workItem from="1517956681410" duration="56000" />
-      <workItem from="1521445412060" duration="32774000" />
+      <workItem from="1521445412060" duration="33145000" />
     </task>
+    <task id="LOCAL-00001" summary="#Using interface to make code more extensible&#10;#Dependency injection with spring">
+      <created>1521482253733</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1521482253733</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -566,7 +538,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38928000" />
+    <option name="totallyTimeSpent" value="39299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -646,6 +618,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="#Using interface to make code more extensible&#10;#Dependency injection with spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Using interface to make code more extensible&#10;#Dependency injection with spring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
