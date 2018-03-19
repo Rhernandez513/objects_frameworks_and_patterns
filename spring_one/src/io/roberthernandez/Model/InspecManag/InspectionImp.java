@@ -1,15 +1,30 @@
-package io.roberthernandez;
+package io.roberthernandez.Model.InspecManag;
 
-import java.util.ArrayList;
+import io.roberthernandez.Model.ScheManag.Schedule;
 
-public class Inspection {
+public class InspectionImp implements Inspection {
     private Schedule schedule;
     private InspectionRequest inspectionRequest;
     private String InspectionResult;
 
-    public Inspection(InspectionRequest ir,Schedule s){
-        this.inspectionRequest=ir;
+    public void setInspectionRequest(InspectionRequest ir){
+        this.inspectionRequest =ir;
+    }
+
+    public void setSchedule(Schedule s){
         this.schedule=s;
+    }
+
+    public Schedule getSchedule() {
+        return this.schedule;
+    }
+
+    public InspectionRequest getInspectionRequest() {
+        return inspectionRequest;
+    }
+
+    public String getInspectionResult(){
+        return this.InspectionResult;
     }
 
     public String toString() {

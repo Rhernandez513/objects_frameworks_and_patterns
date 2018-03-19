@@ -1,6 +1,6 @@
-package io.roberthernandez;
+package io.roberthernandez.Model.UserManag;
 
-public class User {
+public class UserImp implements User{
     private String Username;
     private int UserID;
     private String ContactInfo;

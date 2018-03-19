@@ -1,11 +1,11 @@
-package io.roberthernandez;
+package io.roberthernandez.Model.FacilManag;
 
-public class FacilityDetail {
+public class FacilityDetailImp implements FacilityDetail{
     private String detail;
 
-    public FacilityDetail(String s) {
-        this.detail = s;
+    public FacilityDetailImp() {
     }
+
 
     public void setDetail(String s) {
         this.detail = s;

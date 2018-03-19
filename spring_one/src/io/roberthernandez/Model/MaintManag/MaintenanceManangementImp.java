@@ -1,10 +1,18 @@
-package io.roberthernandez;
+package io.roberthernandez.Model.MaintManag;
+
+import io.roberthernandez.Model.FacilManag.Facility;
+import io.roberthernandez.Model.ScheManag.Schedule;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MaintenanceManangement {
+public class MaintenanceManangementImp implements MaintenanceManangement {
 
-    private ArrayList<Maintenance> maint = new ArrayList<Maintenance>();
+    private List<Maintenance> maint;
+
+    public void setMaint(List<Maintenance> maint){
+        this.maint=maint;
+    }
 
     public void addMaintenanceToBeManaged(Maintenance maintenance) {
         this.maint.add(maintenance);
@@ -53,7 +61,7 @@ public class MaintenanceManangement {
     }
 
     public Object listMaintRequests() {
-        ArrayList<MaintenanceRequest> mrList = new ArrayList<MaintenanceRequest>();
+        List<MaintenanceRequest> mrList=new ArrayList<>();
         for (Maintenance main: maint) {
             mrList.add(main.getRequest());
         }

@@ -1,8 +1,10 @@
-package io.roberthernandez;
+package io.roberthernandez.Model.MaintManag;
+
+import io.roberthernandez.Model.ScheManag.Schedule;
 
 import java.util.ArrayList;
 
-public class Maintenance {
+public class MaintenanceImp implements Maintenance{
     private MaintenanceRequest request;
     private Schedule schedule;
     private double cost;
@@ -12,11 +14,13 @@ public class Maintenance {
         return problemReports.size();
     }
 
-    public Maintenance(MaintenanceRequest r, Schedule s, double c, String ProblemComment) {
+
+    public void setMaintenance(MaintenanceRequest r, Schedule s, double c, String ProblemComment){
         this.setCost(c);
         this.setRequest(r);
         this.setSchedule(s);
         this.problemReports.add(ProblemComment);
+
     }
 
 

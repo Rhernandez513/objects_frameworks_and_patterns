@@ -1,12 +1,16 @@
-package io.roberthernandez;
+package io.roberthernandez.Model.UsageManag;
+
+import io.roberthernandez.Model.FacilManag.Facility;
+import io.roberthernandez.Model.ScheManag.Schedule;
+import io.roberthernandez.Model.UserManag.User;
 
 import java.util.ArrayList;
 import java.util.Date;
 
 // Facility Use
-public class Usage {
+public class UsageImp implements Usage {
 
-    private int min_capacity = 0;
+    private int min_capacity;
     private int reservations = 10;
     private int max_capacity = 50;
     private Facility facility;
@@ -20,13 +24,16 @@ public class Usage {
         return facility;
     }
 
+    public void setMin_capacity(int min_capacity){this.min_capacity=min_capacity;}
+    public void setMax_capacity(int max_capacity){this.max_capacity=max_capacity;}
+
     public void setFacility(Facility f){
         this.facility=f;
         max_capacity=f.getCapacity();
     }
 
-    public void setReservations(int n){
-        this.reservations=n;
+    public void setReservations(int reservations){
+        this.reservations=reservations;
     }
     public void setUser(User u){
         this.user=u;
@@ -50,7 +57,7 @@ public class Usage {
     public Object assignFacilityToUse(Facility facility) {
         facilities_in_use.add(facility);
         for(Facility f : facilities_in_use){
-            System.out.println(f + "is in use.");
+            System.out.println(f + " is in use.");
         }
         return null;
     }

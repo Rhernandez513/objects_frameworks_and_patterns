@@ -1,6 +1,9 @@
-package io.roberthernandez;
+package io.roberthernandez.Model.MaintManag;
 
-public class MaintenanceRequest {
+import io.roberthernandez.Model.FacilManag.Facility;
+import io.roberthernandez.Model.UserManag.User;
+
+public class MaintenanceRequestImp implements MaintenanceRequest {
     private Facility facility;
     private User user;
 

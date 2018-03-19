@@ -1,13 +1,13 @@
-package io.roberthernandez;
+package io.roberthernandez.Model.FacilManag;
 
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class Facility {
+public class FacilityImp implements Facility{
 
     private String name;
     private int capacity;
-    private ArrayList<FacilityDetail> facilityDetails = new ArrayList<FacilityDetail>();
+    private List<FacilityDetail> facilityDetails;
 
 
     public String toString() {
@@ -30,7 +30,7 @@ public class Facility {
         return capacity;
     }
 
-    public ArrayList<FacilityDetail> getFacilityDetails() {
+    public List<FacilityDetail> getFacilityDetails() {
         return facilityDetails;
     }
 
@@ -50,5 +50,9 @@ public class Facility {
     public int requestAvailableCapacity() {
         System.out.println("Retrieving Capacity: " + capacity);
         return capacity;
+    }
+
+    public void setFacilityDetails(List<FacilityDetail> facilityDetails) {
+        this.facilityDetails = facilityDetails;
     }
 }
