@@ -1,3 +1,5 @@
+package test;
+
 import io.roberthernandez.Model.FacilManag.Facility;
 import io.roberthernandez.Model.FacilManag.FacilityDetail;
 import io.roberthernandez.Model.FacilManag.FacilityDetailImp;
@@ -17,7 +19,7 @@ public class FacilityTest {
         Assert.assertEquals(expectedResult, actualResult);
     }
     @Test
-    public void setNameTest(String name) {
+    public void setNameTest() {
         Facility facility = new FacilityImp();
         facility.setName("Hello");
         String expectedResult = "Hello";
@@ -57,6 +59,8 @@ public class FacilityTest {
         Facility facility = new FacilityImp();
         facility.addFacilityDetail(detail);
         List<FacilityDetail> details = facility.getFacilityDetails();
+        System.out.println(detail);
+        System.out.println(details.get(0));
         Assert.assertEquals(detail, details.get(0));
     }
     @Test
