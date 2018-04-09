@@ -58,24 +58,30 @@ public class mainapp {
         System.out.println("Test Observer Pattern:");
         System.out.println("Both Robert and Jun are added in observer list. They will receive message if new maintenance is added to maintenance management list");
         System.out.println();System.out.println();
+
+        //Create user_one
         User user_one = new UserImp();
         user_one.setUsername("Robert");
         user_one.setUserID(1);
         user_one.setContactInfo("rhernandez3@luc.edu");
 
+        //Create user_two
         User user_two = new UserImp();
         user_two.setUsername("Jun");
         user_two.setUserID(2);
         user_two.setContactInfo("jwei4@luc.edu");
 
+        //Create Facility
         Facility facility_one = new FacilityImp();
         facility_one.setCapacity(100);
         facility_one.setName("Loyola Damen");
 
+        //Create maintenance request
         MaintenanceRequest mr=new MaintenanceRequestImp();
         mr.setFacility(facility_one);
         mr.setUser(user_one);
 
+        //Create schedule
         Date first_time = new Date();
         Calendar gcal = new GregorianCalendar();
         gcal.setTime(first_time);
@@ -93,12 +99,15 @@ public class mainapp {
         s.setStartTime(first_time);
         s.setEndTime(third_time);
 
+        //Maintenance Cost
         double c = 20.00;
 
+        //Maintenance Problem
         String problem = "Fix desks.";
         Maintenance maint=new MaintenanceImp();
         maint.setMaintenance(mr,s,c,problem);
 
+        //Create another maintenance, start with maintenance request, schedule, cost and problem
         MaintenanceRequest mr2=new MaintenanceRequestImp();
         mr2.setUser(user_one);
         mr2.setFacility(facility_one);
@@ -113,20 +122,28 @@ public class mainapp {
         Maintenance maint2=new MaintenanceImp();
         maint2.setMaintenance(mr2,s2,c2,problem2);
 
+        //Create Maintenance Manangement
         MaintenanceManangement mm=new MaintenanceManangementImp();
 
+        //Observer subscribe observable object
         user_one.setMaintenanceManangement(mm);
         user_two.setMaintenanceManangement(mm);
+
+        //observable object add observers into list
         mm.addUser(user_one);
         mm.addUser(user_two);
 
+        //Once observable object changes state, change will broadcast to all observers
         mm.addMaintenanceToBeManaged(maint);
 
         System.out.println();
         System.out.println("Jun is removed from observer list. Only Robert will receive new maintenance message.");
         System.out.println();System.out.println();
 
+        //Drop one observer
         mm.removeUser(user_two);
+
+        //observable object changes state and send message only to subscribed observer.
         mm.addMaintenanceToBeManaged(maint2);
 
     }
