@@ -1,11 +1,11 @@
-package test;
+package main.java.test;
 
-import io.roberthernandez.Model.MaintManag.Maintenance;
-import io.roberthernandez.Model.MaintManag.MaintenanceImp;
-import io.roberthernandez.Model.MaintManag.MaintenanceRequest;
-import io.roberthernandez.Model.MaintManag.MaintenanceRequestImp;
-import io.roberthernandez.Model.ScheManag.Schedule;
-import io.roberthernandez.Model.ScheManag.ScheduleImp;
+import main.java.io.roberthernandez.Model.MaintManag.Maintenance;
+import main.java.io.roberthernandez.Model.MaintManag.MaintenanceImp;
+import main.java.io.roberthernandez.Model.MaintManag.MaintenanceRequest;
+import main.java.io.roberthernandez.Model.MaintManag.MaintenanceRequestImp;
+import main.java.io.roberthernandez.Model.ScheManag.Schedule;
+import main.java.io.roberthernandez.Model.ScheManag.ScheduleImp;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

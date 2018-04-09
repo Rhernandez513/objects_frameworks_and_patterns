@@ -1,6 +1,6 @@
-package test;
+package main.java.test;
 
-import io.roberthernandez.Model.InspecManag.*;
+import main.java.io.roberthernandez.Model.InspecManag.*;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

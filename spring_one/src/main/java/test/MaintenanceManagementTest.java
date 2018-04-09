@@ -1,10 +1,10 @@
-package test;
+package main.java.test;
 
 public class MaintenanceManagementTest {
-    @Test
-    void addMaintenanceToBeManagedTest() {
-
-    }
+//    @Test
+//    void addMaintenanceToBeManagedTest() {
+//
+//    }
 //    @Test
 //    long calcDownTimeForFacility(Facility facility);
 //    @Test
