@@ -8,7 +8,7 @@ import io.roberthernandez.Model.ScheManag.Schedule;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-class InspectionImpTest {
+class InspectionTest {
     private Schedule schedule;
     private InspectionRequest inspectionRequest;
     private String InspectionResult;

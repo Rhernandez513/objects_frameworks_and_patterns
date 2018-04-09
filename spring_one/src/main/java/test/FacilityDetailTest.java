@@ -4,7 +4,7 @@ import io.roberthernandez.Model.FacilManag.FacilityDetailImp;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-class FacilityDetailImpTest {
+class FacilityDetailTest {
 
     @Test
     void setDetailTest() {

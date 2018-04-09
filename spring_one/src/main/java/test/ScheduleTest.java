@@ -3,17 +3,17 @@ package test;
 import io.roberthernandez.Model.ScheManag.Schedule;
 import io.roberthernandez.Model.ScheManag.ScheduleImp;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class ScheduleTest {
+class ScheduleTest {
 
 
     @Test
-    public void setStartTime() {
+    public void setStartTimeTest() {
         Date t1 = new Date();
         Schedule schedule=new ScheduleImp();
         schedule.setStartTime(t1);
@@ -21,7 +21,7 @@ public class ScheduleTest {
     }
 
     @Test
-    public void getStartTime() {
+    public void getStartTimeTest() {
         Date t1 = new Date();
         Schedule schedule=new ScheduleImp();
         schedule.setStartTime(t1);
@@ -29,7 +29,7 @@ public class ScheduleTest {
     }
 
     @Test
-    public void setEndTime() {
+    public void setEndTimeTest() {
         Date t1 = new Date();
         Schedule schedule=new ScheduleImp();
         schedule.setEndTime(t1);
@@ -37,7 +37,7 @@ public class ScheduleTest {
     }
 
     @Test
-    public void getEndTime() {
+    public void getEndTimeTest() {
         Date t1 = new Date();
         Schedule schedule=new ScheduleImp();
         schedule.setEndTime(t1);

@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-class FacilityManagementImpTest {
+class FacilityManagementTest {
 
     @Test
     void setFacilityListTest() {
@@ -74,7 +74,7 @@ class FacilityManagementImpTest {
         list.add(facility_one);
         list.add(facility_two);
         FacilityManagement management = new FacilityManagementImp();
-        management.setFacilities(list);
+        management.setFacilityList(list);
         List<Facility> list_under_test = management.getFacilityArrayList();
         Assert.assertEquals(list, list_under_test);
     }

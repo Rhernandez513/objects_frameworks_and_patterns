@@ -2,15 +2,17 @@ package test;
 
 import io.roberthernandez.Model.UserManag.User;
 import io.roberthernandez.Model.UserManag.UserImp;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+
 import org.junit.Assert;
 
 
 
-public class UserTest {
+class UserTest {
 
     @Test
-    public void setUsername() {
+    public void setUsernameTest() {
         User user = new UserImp();
         user.setUsername("Jun");
         String expectedResult = "Jun";
@@ -19,7 +21,7 @@ public class UserTest {
     }
 
     @Test
-    public void getUsername() {
+    public void getUsernameTest() {
         User user = new UserImp();
         user.setUsername("Jun");
         String expectedResult = "Jun";
@@ -28,7 +30,7 @@ public class UserTest {
     }
 
     @Test
-    public void setUserID() {
+    public void setUserIDTest() {
         User user = new UserImp();
         user.setUserID(1);
         int expectedResult = 1;
@@ -37,7 +39,7 @@ public class UserTest {
     }
 
     @Test
-    public void getUserID() {
+    public void getUserIDTest() {
         User user = new UserImp();
         user.setUserID(1);
         int expectedResult = 1;

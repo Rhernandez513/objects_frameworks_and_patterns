@@ -48,7 +48,6 @@ public class FacilityImp implements Facility{
 
 
     public int requestAvailableCapacity() {
-        System.out.println("Retrieving Capacity: " + capacity);
         return capacity;
     }
 
