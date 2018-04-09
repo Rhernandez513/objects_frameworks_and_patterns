@@ -1,6 +1,6 @@
-package io.roberthernandez.Model.InspecManag;
+package main.java.io.roberthernandez.Model.InspecManag;
 
-import io.roberthernandez.Model.ScheManag.Schedule;
+import main.java.io.roberthernandez.Model.ScheManag.Schedule;
 
 public interface Inspection {
     public void setInspectionRequest(InspectionRequest ir);

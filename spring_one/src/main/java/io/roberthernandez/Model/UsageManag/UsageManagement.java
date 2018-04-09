@@ -1,6 +1,6 @@
-package io.roberthernandez.Model.UsageManag;
+package main.java.io.roberthernandez.Model.UsageManag;
 
-import io.roberthernandez.Model.FacilManag.Facility;
+import main.java.io.roberthernandez.Model.FacilManag.Facility;
 
 public interface UsageManagement {
     public void AddUsage(Usage u);

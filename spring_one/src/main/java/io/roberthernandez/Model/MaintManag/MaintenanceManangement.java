@@ -1,6 +1,7 @@
-package io.roberthernandez.Model.MaintManag;
+package main.java.io.roberthernandez.Model.MaintManag;
 
-import io.roberthernandez.Model.FacilManag.Facility;
+import main.java.io.roberthernandez.Model.FacilManag.Facility;
+import main.java.io.roberthernandez.Model.UserManag.User;
 
 import java.util.ArrayList;
 
@@ -12,6 +13,11 @@ public interface MaintenanceManangement {
     public Object listMaintRequests();
     public Object listMaintenance();
     public ArrayList<String> listFacilityProblems(Facility f);
+
+    public void addUser(User user);
+    public void removeUser(User user);
+    public void notifyUser();
+    public Maintenance getNewMaint();
 
 }
 

@@ -1,9 +1,25 @@
-package io.roberthernandez.Model.UserManag;
+package main.java.io.roberthernandez.Model.UserManag;
+
+import main.java.io.roberthernandez.Model.MaintManag.Maintenance;
+import main.java.io.roberthernandez.Model.MaintManag.MaintenanceManangement;
 
 public class UserImp implements User{
     private String Username;
     private int UserID;
     private String ContactInfo;
+    private MaintenanceManangement maint;
+
+    public void setMaintenanceManangement(MaintenanceManangement maint){
+        this.maint=maint;
+    }
+
+    @Override
+    public void update() {
+        Maintenance newMaint = maint.getNewMaint();
+        String notify = "There is new maintenance schedule:\n";
+        notify = notify + newMaint;
+        System.out.println(notify);
+    }
 
     public void setUsername(String input) {
         this.Username = input;

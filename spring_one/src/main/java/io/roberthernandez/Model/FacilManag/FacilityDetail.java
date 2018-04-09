@@ -1,4 +1,4 @@
-package io.roberthernandez.Model.FacilManag;
+package main.java.io.roberthernandez.Model.FacilManag;
 
 public interface FacilityDetail {
     public void setDetail(String s);

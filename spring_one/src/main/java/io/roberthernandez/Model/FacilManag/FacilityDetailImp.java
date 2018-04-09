@@ -1,4 +1,4 @@
-package io.roberthernandez.Model.FacilManag;
+package main.java.io.roberthernandez.Model.FacilManag;
 
 public class FacilityDetailImp implements FacilityDetail{
     private String detail;

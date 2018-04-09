@@ -1,7 +1,7 @@
-package io.roberthernandez.Model.InspecManag;
+package main.java.io.roberthernandez.Model.InspecManag;
 
-import io.roberthernandez.Model.FacilManag.Facility;
-import io.roberthernandez.Model.UserManag.User;
+import main.java.io.roberthernandez.Model.FacilManag.Facility;
+import main.java.io.roberthernandez.Model.UserManag.User;
 
 public class InspectionRequestImp implements InspectionRequest{
    private Facility facility;

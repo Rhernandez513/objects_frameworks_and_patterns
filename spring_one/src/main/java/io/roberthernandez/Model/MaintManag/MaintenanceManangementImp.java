@@ -1,21 +1,40 @@
-package io.roberthernandez.Model.MaintManag;
+package main.java.io.roberthernandez.Model.MaintManag;
 
-import io.roberthernandez.Model.FacilManag.Facility;
-import io.roberthernandez.Model.ScheManag.Schedule;
+import main.java.io.roberthernandez.Model.FacilManag.Facility;
+import main.java.io.roberthernandez.Model.ScheManag.Schedule;
+import main.java.io.roberthernandez.Model.UserManag.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MaintenanceManangementImp implements MaintenanceManangement {
 
-    private List<Maintenance> maint;
+    private List<Maintenance> maint=new ArrayList<>();
+    private ArrayList<User> users=new ArrayList<>();
 
-    public void setMaint(List<Maintenance> maint){
+    public void addUser(User user){
+        users.add(user);
+    }
+
+    public void removeUser(User user){
+        users.remove(user);
+    }
+
+    @Override
+    public void notifyUser() {
+        for (User user: users){
+            System.out.println(user + " received following message:");
+            user.update();
+        }
+    }
+
+    public void setMaint(ArrayList<Maintenance> maint){
         this.maint=maint;
     }
 
     public void addMaintenanceToBeManaged(Maintenance maintenance) {
         this.maint.add(maintenance);
+        notifyUser();
     }
 
     public long calcDownTimeForFacility(Facility facility) {
@@ -87,5 +106,8 @@ public class MaintenanceManangementImp implements MaintenanceManangement {
         return problems;
     }
 
+    public Maintenance getNewMaint(){
+        return maint.get(maint.size()-1);
+    }
 
 }
