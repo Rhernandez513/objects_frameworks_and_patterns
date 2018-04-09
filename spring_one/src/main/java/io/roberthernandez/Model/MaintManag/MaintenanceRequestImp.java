@@ -1,7 +1,7 @@
-package io.roberthernandez.Model.MaintManag;
+package main.java.io.roberthernandez.Model.MaintManag;
 
-import io.roberthernandez.Model.FacilManag.Facility;
-import io.roberthernandez.Model.UserManag.User;
+import main.java.io.roberthernandez.Model.FacilManag.Facility;
+import main.java.io.roberthernandez.Model.UserManag.User;
 
 public class MaintenanceRequestImp implements MaintenanceRequest {
     private Facility facility;

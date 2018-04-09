@@ -1,7 +1,7 @@
-package io.roberthernandez.Model.UserManag;
+package main.java.io.roberthernandez.Model.UserManag;
 
-import io.roberthernandez.Model.MaintManag.Maintenance;
-import io.roberthernandez.Model.MaintManag.MaintenanceManangement;
+import main.java.io.roberthernandez.Model.MaintManag.Maintenance;
+import main.java.io.roberthernandez.Model.MaintManag.MaintenanceManangement;
 
 public class UserImp implements User{
     private String Username;

@@ -1,9 +1,9 @@
-package test;
+package main.java.test;
 
-import io.roberthernandez.Model.FacilManag.Facility;
-import io.roberthernandez.Model.FacilManag.FacilityImp;
-import io.roberthernandez.Model.FacilManag.FacilityManagement;
-import io.roberthernandez.Model.FacilManag.FacilityManagementImp;
+import main.java.io.roberthernandez.Model.FacilManag.Facility;
+import main.java.io.roberthernandez.Model.FacilManag.FacilityImp;
+import main.java.io.roberthernandez.Model.FacilManag.FacilityManagement;
+import main.java.io.roberthernandez.Model.FacilManag.FacilityManagementImp;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

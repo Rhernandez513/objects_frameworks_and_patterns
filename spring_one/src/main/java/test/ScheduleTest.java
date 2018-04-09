@@ -1,7 +1,7 @@
-package test;
+package main.java.test;
 
-import io.roberthernandez.Model.ScheManag.Schedule;
-import io.roberthernandez.Model.ScheManag.ScheduleImp;
+import main.java.io.roberthernandez.Model.ScheManag.Schedule;
+import main.java.io.roberthernandez.Model.ScheManag.ScheduleImp;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

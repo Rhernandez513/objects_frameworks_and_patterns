@@ -1,16 +1,10 @@
-package io.roberthernandez.Service;
-
-import io.roberthernandez.Model.FacilManag.*;
-import io.roberthernandez.Model.InspecManag.Inspection;
-import io.roberthernandez.Model.InspecManag.InspectionManagement;
-import io.roberthernandez.Model.InspecManag.InspectionRequest;
-import io.roberthernandez.Model.MaintManag.*;
-import io.roberthernandez.Model.ScheManag.Schedule;
-import io.roberthernandez.Model.ScheManag.ScheduleImp;
-import io.roberthernandez.Model.UsageManag.Usage;
-import io.roberthernandez.Model.UsageManag.UsageManagement;
-import io.roberthernandez.Model.UserManag.User;
-import io.roberthernandez.Model.UserManag.UserImp;
+package main.java.io.roberthernandez.Service;
+import main.java.io.roberthernandez.Model.FacilManag.*;
+import main.java.io.roberthernandez.Model.InspecManag.*;
+import main.java.io.roberthernandez.Model.MaintManag.*;
+import main.java.io.roberthernandez.Model.ScheManag.*;
+import main.java.io.roberthernandez.Model.UsageManag.*;
+import main.java.io.roberthernandez.Model.UserManag.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -74,7 +68,7 @@ public class mainapp {
         user_two.setUserID(2);
         user_two.setContactInfo("jwei4@luc.edu");
 
-        Facility facility_one =  new FacilityImp();
+        Facility facility_one = new FacilityImp();
         facility_one.setCapacity(100);
         facility_one.setName("Loyola Damen");
 

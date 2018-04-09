@@ -1,8 +1,8 @@
-package io.roberthernandez.Model.ScheManag;
+package main.java.io.roberthernandez.Model.ScheManag;
 
 import java.util.Date;
 
-public class ScheduleImp implements Schedule{
+public class ScheduleImp implements Schedule {
     private Date StartTime;
     private Date EndTime;
 

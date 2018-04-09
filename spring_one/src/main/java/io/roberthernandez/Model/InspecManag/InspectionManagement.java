@@ -1,4 +1,4 @@
-package io.roberthernandez.Model.InspecManag;
+package main.java.io.roberthernandez.Model.InspecManag;
 
 import java.util.List;
 

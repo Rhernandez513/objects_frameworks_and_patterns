@@ -1,7 +1,7 @@
-package test;
+package main.java.test;
 
-import io.roberthernandez.Model.UserManag.User;
-import io.roberthernandez.Model.UserManag.UserImp;
+import main.java.io.roberthernandez.Model.UserManag.User;
+import main.java.io.roberthernandez.Model.UserManag.UserImp;
 
 import org.junit.jupiter.api.Test;
 

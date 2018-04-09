@@ -1,4 +1,4 @@
-package io.roberthernandez.Model.ScheManag;
+package main.java.io.roberthernandez.Model.ScheManag;
 
 import java.util.Date;
 

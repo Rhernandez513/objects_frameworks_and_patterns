@@ -1,8 +1,8 @@
-package io.roberthernandez.Model.MaintManag;
+package main.java.io.roberthernandez.Model.MaintManag;
 
-import io.roberthernandez.Model.FacilManag.Facility;
-import io.roberthernandez.Model.ScheManag.Schedule;
-import io.roberthernandez.Model.UserManag.User;
+import main.java.io.roberthernandez.Model.FacilManag.Facility;
+import main.java.io.roberthernandez.Model.ScheManag.Schedule;
+import main.java.io.roberthernandez.Model.UserManag.User;
 
 import java.util.ArrayList;
 import java.util.List;

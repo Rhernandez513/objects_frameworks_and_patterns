@@ -1,6 +1,6 @@
-package io.roberthernandez.Model.UserManag;
+package main.java.io.roberthernandez.Model.UserManag;
 
-import io.roberthernandez.Model.MaintManag.MaintenanceManangement;
+import main.java.io.roberthernandez.Model.MaintManag.*;
 
 public interface User {
     public void setUsername(String input);

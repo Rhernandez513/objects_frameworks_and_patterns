@@ -1,7 +1,7 @@
-package test;
+package main.java.test;
 
-import io.roberthernandez.Model.FacilManag.Facility;
-import io.roberthernandez.Model.FacilManag.FacilityImp;
+import main.java.io.roberthernandez.Model.FacilManag.Facility;
+import main.java.io.roberthernandez.Model.FacilManag.FacilityImp;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

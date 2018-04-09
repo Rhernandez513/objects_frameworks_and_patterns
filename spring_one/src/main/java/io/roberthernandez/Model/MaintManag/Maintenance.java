@@ -1,6 +1,6 @@
-package io.roberthernandez.Model.MaintManag;
+package main.java.io.roberthernandez.Model.MaintManag;
 
-import io.roberthernandez.Model.ScheManag.Schedule;
+import main.java.io.roberthernandez.Model.ScheManag.Schedule;
 
 import java.util.ArrayList;
 
