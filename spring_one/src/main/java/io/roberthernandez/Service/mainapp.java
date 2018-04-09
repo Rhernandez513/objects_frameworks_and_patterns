@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class mainapp {
     public static void main(String[] args) {
 
-//        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
+//        ApplicationContext context = new ClassPathXmlApplicationContext("C:\\Users\\Jun\\Desktop\\COMP473\\Project1\\objects_frameworks_and_patterns\\spring_one\\src\\main\\java\\META-INF\\app-context.xml");
 //        System.out.println("***************** Application Context instantiated! ******************");
 //
 //        System.out.println("\n\nTest:");
@@ -54,7 +54,7 @@ public class mainapp {
 //        testListMaintRequest();
 //        testListMaintenance();
 //        testListFacilityProblems();
-//
+
         System.out.println("Test Observer Pattern:");
         System.out.println("Both Robert and Jun are added in observer list. They will receive message if new maintenance is added to maintenance management list");
         System.out.println();System.out.println();

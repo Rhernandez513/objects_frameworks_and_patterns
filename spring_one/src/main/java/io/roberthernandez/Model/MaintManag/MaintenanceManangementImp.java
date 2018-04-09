@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MaintenanceManangementImp implements MaintenanceManangement {
 
-    private ArrayList<Maintenance> maint=new ArrayList<>();
+    private List<Maintenance> maint=new ArrayList<>();
     private ArrayList<User> users=new ArrayList<>();
 
     public void addUser(User user){

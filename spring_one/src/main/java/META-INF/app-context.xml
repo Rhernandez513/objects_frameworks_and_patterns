@@ -11,59 +11,59 @@
 
 	<description>Wiring the dependencies for the Online book Store Application.</description>
 
-	<context:component-scan base-package="io.roberthernandez"/>
+	<context:component-scan base-package="main.java.io.roberthernandez"/>
 
-	<bean id="user" class="io.roberthernandez.Model.UserManag.UserImp" scope="prototype"/>
+	<bean id="user" class="main.java.io.roberthernandez.Model.UserManag.UserImp" scope="prototype"/>
 
-	<bean id="schedule" class="io.roberthernandez.Model.ScheManag.ScheduleImp" scope="prototype"/>
-    <bean id="facilityDetail" class="io.roberthernandez.Model.FacilManag.FacilityDetailImp" scope="prototype"/>
+	<bean id="schedule" class="main.java.io.roberthernandez.Model.ScheManag.ScheduleImp" scope="prototype"/>
+    <bean id="facilityDetail" class="main.java.io.roberthernandez.Model.FacilManag.FacilityDetailImp" scope="prototype"/>
 
-	<bean id="facility" class="io.roberthernandez.Model.FacilManag.FacilityImp" scope="prototype">
+	<bean id="facility" class="main.java.io.roberthernandez.Model.FacilManag.FacilityImp" scope="prototype">
 		<property name="facilityDetails">
 			<list/>
 		</property>
 	</bean>
 
-	<bean id="facilityManagement" class="io.roberthernandez.Model.FacilManag.FacilityManagementImp" scope="prototype">
+	<bean id="facilityManagement" class="main.java.io.roberthernandez.Model.FacilManag.FacilityManagementImp" scope="prototype">
 		<property name="facilities">
 				<list/>
 
 		</property>
 	</bean>
 
-	<bean id="inspectionRequest" class="io.roberthernandez.Model.InspecManag.InspectionRequestImp" scope="prototype">
+	<bean id="inspectionRequest" class="main.java.io.roberthernandez.Model.InspecManag.InspectionRequestImp" scope="prototype">
 		<property name="facility" ref="facility"/>
 		<property name="user" ref="user"/>
 	</bean>
 
-	<bean id="inspection" class="io.roberthernandez.Model.InspecManag.InspectionImp" scope="prototype">
+	<bean id="inspection" class="main.java.io.roberthernandez.Model.InspecManag.InspectionImp" scope="prototype">
 		<property name="inspectionRequest" ref="inspectionRequest"/>
 		<property name="schedule" ref="schedule"/>
 	</bean>
 
-	<bean id="inspectionManagement" class="io.roberthernandez.Model.InspecManag.InspectionManagementImp" scope="prototype">
+	<bean id="inspectionManagement" class="main.java.io.roberthernandez.Model.InspecManag.InspectionManagementImp" scope="prototype">
 		<property name="inspections">
 				<list/>
 		</property>
 	</bean>
 
-	<bean id="maintenanceRequest" class="io.roberthernandez.Model.MaintManag.MaintenanceRequestImp" scope="prototype">
+	<bean id="maintenanceRequest" class="main.java.io.roberthernandez.Model.MaintManag.MaintenanceRequestImp" scope="prototype">
 		<property name="facility" ref="facility"/>
 		<property name="user" ref="user"/>
 	</bean>
 
-	<bean id="maintenance" class="io.roberthernandez.Model.MaintManag.MaintenanceImp" scope="prototype">
+	<bean id="maintenance" class="main.java.io.roberthernandez.Model.MaintManag.MaintenanceImp" scope="prototype">
 		<property name="request" ref="maintenanceRequest"/>
 		<property name="schedule" ref="schedule"/>
 	</bean>
 
-	<bean id="maintenanceManagement" class="io.roberthernandez.Model.MaintManag.MaintenanceManangementImp" scope="prototype">
+	<bean id="maintenanceManagement" class="main.java.io.roberthernandez.Model.MaintManag.MaintenanceManangementImp" scope="prototype">
 		<property name="maint">
 		<list/>
 		</property>
 	</bean>
 
-	<bean id="usage" class="io.roberthernandez.Model.UsageManag.UsageImp" scope="prototype">
+	<bean id="usage" class="main.java.io.roberthernandez.Model.UsageManag.UsageImp" scope="prototype">
 		<property name="facility" ref="facility"/>
 		<property name="user" ref="user"/>
 		<property name="min_capacity" >
@@ -75,7 +75,7 @@
 
 	</bean>
 
-	<bean id="usageManagement" class="io.roberthernandez.Model.UsageManag.UsageManagementImp" scope="prototype">
+	<bean id="usageManagement" class="main.java.io.roberthernandez.Model.UsageManag.UsageManagementImp" scope="prototype">
 		<property name="usages">
 			<list/>
 		</property>
