@@ -72,7 +72,6 @@ public class MaintenanceManangementImp implements MaintenanceManangement {
 
         for (Maintenance main : maint) {
             if (main.getRequest().getFacility() == facility) {
-                //System.out.println("True, can calculate maintenance costs");
                 cost += main.getCost();
             }
         }
