@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef524c51-910f-43d3-b1fc-2cff3f8c8665" name="Default" comment="#Adding Observer Pattern. User in observer list will receive message when new maintenance is added in maintenance management.">
+    <list default="true" id="ef524c51-910f-43d3-b1fc-2cff3f8c8665" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/spring_one.iml" afterPath="$PROJECT_DIR$/spring_one.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/app-context.xml" afterPath="$PROJECT_DIR$/src/main/java/META-INF/app-context.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceManangementImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceManangementImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Service/mainapp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Service/mainapp.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -948,7 +944,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523304168008</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="#Change spring framework path. Still not working.">
+      <created>1523305264743</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1523305264743</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -984,7 +987,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54682000" />
+    <option name="totallyTimeSpent" value="54753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -1091,7 +1094,8 @@
     <MESSAGE value="#Adding User test" />
     <MESSAGE value="#Adding Schedule test" />
     <MESSAGE value="#Adding Observer Pattern. User in observer list will receive message when new maintenance is added in maintenance management." />
-    <option name="LAST_COMMIT_MESSAGE" value="#Adding Observer Pattern. User in observer list will receive message when new maintenance is added in maintenance management." />
+    <MESSAGE value="#Change spring framework path. Still not working." />
+    <option name="LAST_COMMIT_MESSAGE" value="#Change spring framework path. Still not working." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
