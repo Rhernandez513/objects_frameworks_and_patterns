@@ -80,7 +80,7 @@ public class MaintenanceManangementImp implements MaintenanceManangement {
     }
 
     public Object listMaintRequests() {
-        List<MaintenanceRequest> mrList=new ArrayList<>();
+        List<MaintenanceRequest> mrList=new ArrayList<MaintenanceRequest>();
         for (Maintenance main: maint) {
             mrList.add(main.getRequest());
         }
