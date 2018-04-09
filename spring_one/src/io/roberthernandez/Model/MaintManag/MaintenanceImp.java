@@ -1,14 +1,19 @@
 package io.roberthernandez.Model.MaintManag;
 
 import io.roberthernandez.Model.ScheManag.Schedule;
+import io.roberthernandez.Model.UserManag.User;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MaintenanceImp implements Maintenance{
     private MaintenanceRequest request;
     private Schedule schedule;
     private double cost;
     private ArrayList<String> problemReports = new ArrayList<String>();
+    private ArrayList<User> users = new ArrayList<User>();
+
+
 
     public int getLenghtOfProblemReport() {
         return problemReports.size();

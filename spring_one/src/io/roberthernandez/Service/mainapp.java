@@ -4,14 +4,13 @@ import io.roberthernandez.Model.FacilManag.*;
 import io.roberthernandez.Model.InspecManag.Inspection;
 import io.roberthernandez.Model.InspecManag.InspectionManagement;
 import io.roberthernandez.Model.InspecManag.InspectionRequest;
-import io.roberthernandez.Model.MaintManag.Maintenance;
-import io.roberthernandez.Model.MaintManag.MaintenanceManangement;
-import io.roberthernandez.Model.MaintManag.MaintenanceRequest;
+import io.roberthernandez.Model.MaintManag.*;
 import io.roberthernandez.Model.ScheManag.Schedule;
 import io.roberthernandez.Model.ScheManag.ScheduleImp;
 import io.roberthernandez.Model.UsageManag.Usage;
 import io.roberthernandez.Model.UsageManag.UsageManagement;
 import io.roberthernandez.Model.UserManag.User;
+import io.roberthernandez.Model.UserManag.UserImp;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -24,43 +23,117 @@ import java.util.concurrent.TimeUnit;
 public class mainapp {
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
-        System.out.println("***************** Application Context instantiated! ******************");
+//        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
+//        System.out.println("***************** Application Context instantiated! ******************");
+//
+//        System.out.println("\n\nTest:");
+//        User user1 = (User) context.getBean("user");
+//
+//        user1.setContactInfo("rhernandez3@luc.edu");
+//        user1.setUserID(1);
+//        user1.setUsername("Robert");
+//
+//        System.out.println(user1.toString());
+//
+//        System.out.println("End of Test.\n\n");
+//
+//
+//        testListFacilities();
+//        testGetFacilityInformation();
+//        testRequestAvalibleCapacity();
+//        testAddNewFacility();
+//        testAddFacilityDetail();
+//        testRemoveFacility();
+//
+//        testIsInUseDuringInterval();
+//        testAssignFacilityToUse();
+//        testVacateFacility();
+//        testListActualUsage();
+//        testcalFacilityUsageRate();
+//        testListInspection();
+//
+//        testMakeMaintRequest();
+//        testScheduleMaintenance();
+//        testcalMaintenanceCostForFacility();
+//        testcalProblemRateForFacility();
+//        testcalDownTimeForFacility();
+//        testListMaintRequest();
+//        testListMaintenance();
+//        testListFacilityProblems();
+//
+        System.out.println("Test Observer Pattern:");
+        System.out.println("Both Robert and Jun are added in observer list. They will receive message if new maintenance is added to maintenance management list");
+        System.out.println();System.out.println();
+        User user_one = new UserImp();
+        user_one.setUsername("Robert");
+        user_one.setUserID(1);
+        user_one.setContactInfo("rhernandez3@luc.edu");
 
-        System.out.println("\n\nTest:");
-        User user1 = (User) context.getBean("user");
+        User user_two = new UserImp();
+        user_two.setUsername("Jun");
+        user_two.setUserID(2);
+        user_two.setContactInfo("jwei4@luc.edu");
 
-        user1.setContactInfo("rhernandez3@luc.edu");
-        user1.setUserID(1);
-        user1.setUsername("Robert");
+        Facility facility_one =  new FacilityImp();
+        facility_one.setCapacity(100);
+        facility_one.setName("Loyola Damen");
 
-        System.out.println(user1.toString());
+        MaintenanceRequest mr=new MaintenanceRequestImp();
+        mr.setFacility(facility_one);
+        mr.setUser(user_one);
 
-        System.out.println("End of Test.\n\n");
+        Date first_time = new Date();
+        Calendar gcal = new GregorianCalendar();
+        gcal.setTime(first_time);
+        gcal.add(Calendar.SECOND, 4);
+        Date third_time = gcal.getTime();
+
+        gcal.add(Calendar.SECOND, 20);
+        Date second_time=gcal.getTime();
+        gcal.add(Calendar.SECOND,20);
+        Date fourth_time=gcal.getTime();
 
 
-        testListFacilities();
-        testGetFacilityInformation();
-        testRequestAvalibleCapacity();
-        testAddNewFacility();
-        testAddFacilityDetail();
-        testRemoveFacility();
+        ScheduleImp s=new ScheduleImp();
 
-        testIsInUseDuringInterval();
-        testAssignFacilityToUse();
-        testVacateFacility();
-        testListActualUsage();
-        testcalFacilityUsageRate();
-        testListInspection();
+        s.setStartTime(first_time);
+        s.setEndTime(third_time);
 
-        testMakeMaintRequest();
-        testScheduleMaintenance();
-        testcalMaintenanceCostForFacility();
-        testcalProblemRateForFacility();
-        testcalDownTimeForFacility();
-        testListMaintRequest();
-        testListMaintenance();
-        testListFacilityProblems();
+        double c = 20.00;
+
+        String problem = "Fix desks.";
+        Maintenance maint=new MaintenanceImp();
+        maint.setMaintenance(mr,s,c,problem);
+
+        MaintenanceRequest mr2=new MaintenanceRequestImp();
+        mr2.setUser(user_one);
+        mr2.setFacility(facility_one);
+
+        Schedule s2=new ScheduleImp();
+        s2.setStartTime(second_time);
+        s2.setEndTime(fourth_time);
+
+        double c2=50.00;
+        String problem2="Fix floor";
+
+        Maintenance maint2=new MaintenanceImp();
+        maint2.setMaintenance(mr2,s2,c2,problem2);
+
+        MaintenanceManangement mm=new MaintenanceManangementImp();
+
+        user_one.setMaintenanceManangement(mm);
+        user_two.setMaintenanceManangement(mm);
+        mm.addUser(user_one);
+        mm.addUser(user_two);
+
+        mm.addMaintenanceToBeManaged(maint);
+
+        System.out.println();
+        System.out.println("Jun is removed from observer list. Only Robert will receive new maintenance message.");
+        System.out.println();System.out.println();
+
+        mm.removeUser(user_two);
+        mm.addMaintenanceToBeManaged(maint2);
 
     }
 
