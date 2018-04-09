@@ -3,39 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ef524c51-910f-43d3-b1fc-2cff3f8c8665" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/Facility.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/Facility.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/FacilityDetail.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/FacilityDetail.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/FacilityDetailImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/FacilityDetailImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/FacilityImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/FacilityImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/FacilityManagement.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/FacilityManagement.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/FacilityManagementImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/FacilManag/FacilityManagementImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/Inspection.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/Inspection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/InspectionImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/InspectionImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/InspectionManagement.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/InspectionManagement.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/InspectionManagementImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/InspectionManagementImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/InspectionRequest.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/InspectionRequest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/InspectionRequestImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/InspecManag/InspectionRequestImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/Maintenance.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/Maintenance.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceManangement.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceManangement.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceManangementImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceManangementImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceRequest.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceRequest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceRequestImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/MaintManag/MaintenanceRequestImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/ScheManag/Schedule.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/ScheManag/Schedule.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/ScheManag/ScheduleImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/ScheManag/ScheduleImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/Usage.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/Usage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/UsageImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/UsageImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/UsageManagement.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/UsageManagement.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/UsageManagementImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/UsageManagementImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UserManag/User.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UserManag/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UserManag/UserImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UserManag/UserImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Service/mainapp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Service/mainapp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/FacilityDetailTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/FacilityDetailTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/FacilityManagementTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/FacilityManagementTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/FacilityTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/FacilityTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/InspectionTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/InspectionTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/ScheduleTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/ScheduleTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/UserTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/UserTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -954,7 +921,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523289329679</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="#Adding Observer Pattern. User in observer list will receive message when new maintenance is added in maintenance management.">
+      <created>1523304153821</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1523304153821</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -990,7 +964,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53583000" />
+    <option name="totallyTimeSpent" value="53654000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -1003,7 +977,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35081968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35081968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20260416" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1096,7 +1070,8 @@
     <MESSAGE value="#Using interface to make code more extensible&#10;#Dependency injection with spring" />
     <MESSAGE value="#Adding User test" />
     <MESSAGE value="#Adding Schedule test" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Adding Schedule test" />
+    <MESSAGE value="#Adding Observer Pattern. User in observer list will receive message when new maintenance is added in maintenance management." />
+    <option name="LAST_COMMIT_MESSAGE" value="#Adding Observer Pattern. User in observer list will receive message when new maintenance is added in maintenance management." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
