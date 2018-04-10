@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef524c51-910f-43d3-b1fc-2cff3f8c8665" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/ScheManag/MaximalTimeSchedule.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/ScheManag/MinimalTimeScheduleImp.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/ScheManag/RegularScheduleImp.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/app-context.xml" afterPath="$PROJECT_DIR$/src/main/java/META-INF/app-context.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/ScheManag/Schedule.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/ScheManag/Schedule.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/ScheManag/ScheduleImp.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/Usage.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/Usage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/UsageImp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Model/UsageManag/UsageImp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Service/mainapp.java" afterPath="$PROJECT_DIR$/src/main/java/io/roberthernandez/Service/mainapp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/InspectionTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/InspectionTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/MaintenanceTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/MaintenanceTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/ScheduleTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/ScheduleTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -927,7 +915,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523306236617</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="#Add Bridge pattern. Different implementation for Schedule (regular, MinimalTimeSchedule, or MaximalTimeSchedule)">
+      <created>1523323941632</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1523323941632</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -963,7 +958,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67215000" />
+    <option name="totallyTimeSpent" value="67312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -1073,7 +1068,8 @@
     <MESSAGE value="#Adding Observer Pattern. User in observer list will receive message when new maintenance is added in maintenance management." />
     <MESSAGE value="#Change spring framework path. Still not working." />
     <MESSAGE value="#Add comments in mainapp to explain observer pattern design" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Add comments in mainapp to explain observer pattern design" />
+    <MESSAGE value="#Add Bridge pattern. Different implementation for Schedule (regular, MinimalTimeSchedule, or MaximalTimeSchedule)" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Add Bridge pattern. Different implementation for Schedule (regular, MinimalTimeSchedule, or MaximalTimeSchedule)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
