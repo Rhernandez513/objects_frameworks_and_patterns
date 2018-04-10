@@ -3,8 +3,7 @@ package main.java.test;
 import main.java.io.roberthernandez.Model.FacilManag.Facility;
 import main.java.io.roberthernandez.Model.FacilManag.FacilityImp;
 import main.java.io.roberthernandez.Model.MaintManag.*;
-import main.java.io.roberthernandez.Model.ScheManag.Schedule;
-import main.java.io.roberthernandez.Model.ScheManag.ScheduleImp;
+import main.java.io.roberthernandez.Model.ScheManag.*;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +22,7 @@ public class MaintenanceManagementTest {
     void calcDownTimeForFacilityTest() {
         long timeDeltaAsUnix = 0;
 
-        Schedule s = new ScheduleImp();
+        Schedule s = new RegularScheduleImp();
 
         //Create schedule
         Date first_time = new Date();
