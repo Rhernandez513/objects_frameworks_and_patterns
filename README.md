@@ -10,6 +10,11 @@ Some features include:
   Automatically retreive and view maintenance requests!
   And that's not all!
     Included with your package is a full test suite, working out the application logic to ensure that the product arrives to you in a pristine state!
+    
+In recent update, two design patterns are used.
+First, Observer Pattern is used. Users can subscribe for update of new maintenance. Once new maintenance is added to maintenance management, subscribed users will receive notification about new maintenance.
+
+Second, Bridge Pattern is used. Different implementations of schedule are used to dynamically bind to facility usage. 
 
 
 Future Goals:
