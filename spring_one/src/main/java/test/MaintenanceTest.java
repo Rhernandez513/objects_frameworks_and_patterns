@@ -5,7 +5,7 @@ import main.java.io.roberthernandez.Model.MaintManag.MaintenanceImp;
 import main.java.io.roberthernandez.Model.MaintManag.MaintenanceRequest;
 import main.java.io.roberthernandez.Model.MaintManag.MaintenanceRequestImp;
 import main.java.io.roberthernandez.Model.ScheManag.Schedule;
-import main.java.io.roberthernandez.Model.ScheManag.ScheduleImp;
+import main.java.io.roberthernandez.Model.ScheManag.RegularScheduleImp;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +24,7 @@ class MaintenanceTest {
     @Test
     void setMaintenanceTest() {
         MaintenanceRequest r = new MaintenanceRequestImp();
-        Schedule s = new ScheduleImp();
+        Schedule s = new RegularScheduleImp();
         String ProblemComment = "ProblemComment";
         double cost = 0.00;
         Maintenance maintenance = new MaintenanceImp();
@@ -43,7 +43,7 @@ class MaintenanceTest {
     @Test
     void toStringTest() {
         MaintenanceRequest r = new MaintenanceRequestImp();
-        Schedule s = new ScheduleImp();
+        Schedule s = new RegularScheduleImp();
         String ProblemComment = "ProblemComment";
         double cost = 0.00;
         Maintenance maintenance = new MaintenanceImp();
@@ -72,7 +72,7 @@ class MaintenanceTest {
     @Test
     void getScheduleTest() {
         MaintenanceRequest r = new MaintenanceRequestImp();
-        Schedule s = new ScheduleImp();
+        Schedule s = new RegularScheduleImp();
         String ProblemComment = "ProblemComment";
         double cost = 0.00;
         Maintenance maintenance = new MaintenanceImp();
@@ -83,7 +83,7 @@ class MaintenanceTest {
     @Test
     void setSchedule() {
         MaintenanceRequest r = new MaintenanceRequestImp();
-        Schedule s = new ScheduleImp();
+        Schedule s = new RegularScheduleImp();
         String ProblemComment = "ProblemComment";
         double cost = 0.00;
         Maintenance maintenance = new MaintenanceImp();
@@ -94,7 +94,7 @@ class MaintenanceTest {
     @Test
     void getCost() {
         MaintenanceRequest r = new MaintenanceRequestImp();
-        Schedule s = new ScheduleImp();
+        Schedule s = new RegularScheduleImp();
         String ProblemComment = "ProblemComment";
         double cost = 0.00;
         Maintenance maintenance = new MaintenanceImp();
@@ -104,7 +104,7 @@ class MaintenanceTest {
     @Test
     void setCost() {
         MaintenanceRequest r = new MaintenanceRequestImp();
-        Schedule s = new ScheduleImp();
+        Schedule s = new RegularScheduleImp();
         String ProblemComment = "ProblemComment";
         double cost = 0.00;
         Maintenance maintenance = new MaintenanceImp();

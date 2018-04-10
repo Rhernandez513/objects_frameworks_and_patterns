@@ -9,7 +9,7 @@ import main.java.io.roberthernandez.Model.InspecManag.InspectionImp;
 import main.java.io.roberthernandez.Model.InspecManag.InspectionRequest;
 import main.java.io.roberthernandez.Model.InspecManag.InspectionRequestImp;
 import main.java.io.roberthernandez.Model.ScheManag.Schedule;
-import main.java.io.roberthernandez.Model.ScheManag.ScheduleImp;
+import main.java.io.roberthernandez.Model.ScheManag.RegularScheduleImp;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -32,7 +32,7 @@ class InspectionTest {
 
     @Test
     void setScheduleTest() {
-        Schedule s = new ScheduleImp();
+        Schedule s = new RegularScheduleImp();
 
         Date first_time = new Date();
         Calendar gcal = new GregorianCalendar();
@@ -52,7 +52,7 @@ class InspectionTest {
     @Test
     void getScheduleTest() {
 
-        Schedule s = new ScheduleImp();
+        Schedule s = new RegularScheduleImp();
 
         Date first_time = new Date();
         Calendar gcal = new GregorianCalendar();

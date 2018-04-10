@@ -18,4 +18,5 @@ public interface Usage {
     public Object vacateFacility();
     public Object listActualUsage();
     public Object calcUsageRate();
+    public String toString();
 }

@@ -15,7 +15,7 @@
 
 	<bean id="user" class="main.java.io.roberthernandez.Model.UserManag.UserImp" scope="prototype"/>
 
-	<bean id="schedule" class="main.java.io.roberthernandez.Model.ScheManag.ScheduleImp" scope="prototype"/>
+	<bean id="schedule" class="main.java.io.roberthernandez.Model.ScheManag.RegularScheduleImp" scope="prototype"/>
     <bean id="facilityDetail" class="main.java.io.roberthernandez.Model.FacilManag.FacilityDetailImp" scope="prototype"/>
 
 	<bean id="facility" class="main.java.io.roberthernandez.Model.FacilManag.FacilityImp" scope="prototype">

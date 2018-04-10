@@ -30,6 +30,7 @@ public class UsageImp implements Usage {
     public void setFacility(Facility f){
         this.facility=f;
         max_capacity=f.getCapacity();
+
     }
 
     public void setReservations(int reservations){
@@ -83,4 +84,13 @@ public class UsageImp implements Usage {
         String percentage = percentage_in_use + "%";
         return percentage;
     }
+
+    public String toString(){
+        String response = "In this Usage, User is " + user.getUsername()+"\n";
+        response += "In this Usage, facility is " + facility.getName()+"\n";
+        response += "Schedule is: " + schedule +"\n";
+        return response;
+
+    }
+
 }
