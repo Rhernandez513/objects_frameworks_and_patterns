@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef524c51-910f-43d3-b1fc-2cff3f8c8665" name="Default" comment="#Add UML diagram in Asth">
-      <change beforePath="" afterPath="$PROJECT_DIR$/FacilityManagement Diagram project3.asta" />
+    <list default="true" id="ef524c51-910f-43d3-b1fc-2cff3f8c8665" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -814,7 +813,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523323951400</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="#Add UML diagram in Astah file">
+      <created>1523334755116</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1523334755116</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -850,7 +856,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69836000" />
+    <option name="totallyTimeSpent" value="69853000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -960,7 +966,8 @@
     <MESSAGE value="#Change spring framework path. Still not working." />
     <MESSAGE value="#Add comments in mainapp to explain observer pattern design" />
     <MESSAGE value="#Add Bridge pattern. Different implementation for Schedule (regular, MinimalTimeSchedule, or MaximalTimeSchedule)" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Add Bridge pattern. Different implementation for Schedule (regular, MinimalTimeSchedule, or MaximalTimeSchedule)" />
+    <MESSAGE value="#Add UML diagram in Astah file" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Add UML diagram in Astah file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
