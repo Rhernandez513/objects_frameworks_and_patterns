@@ -2,11 +2,16 @@ package main.java.io.roberthernandez.Service;
 import main.java.io.roberthernandez.Model.FacilManag.Facility;
 import main.java.io.roberthernandez.Model.FacilManag.FacilityImp;
 import main.java.io.roberthernandez.Model.MaintManag.*;
+import main.java.io.roberthernandez.Model.MaintManag.MaintenanceItemVisitor.MaintenanceItemBlackboard;
+import main.java.io.roberthernandez.Model.MaintManag.MaintenanceItemVisitor.MaintenanceItemDesk;
+import main.java.io.roberthernandez.Model.MaintManag.MaintenanceItemVisitor.MaintenanceItemLight;
+import main.java.io.roberthernandez.Model.MaintManag.MaintenanceItemVisitor.MaintenanceItemlizedCost;
 import main.java.io.roberthernandez.Model.ScheManag.*;
 import main.java.io.roberthernandez.Model.UserManag.User;
 import main.java.io.roberthernandez.Model.UserManag.UserImp;
 import main.java.io.roberthernandez.Model.UsageManag.*;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -107,7 +112,7 @@ public class mainapp {
         //Maintenance Problem
         String problem = "Fix desks.";
         Maintenance maint = new MaintenanceImp();
-        maint.setMaintenance(mr, s, c, problem);
+        maint.setMaintenance(1, mr, s, c, problem);
 
         //Create another maintenance, start with maintenance request, schedule, cost and problem
         MaintenanceRequest mr2 = new MaintenanceRequestImp();
@@ -123,7 +128,7 @@ public class mainapp {
         String problem2 = "Fix floor";
 
         Maintenance maint2 = new MaintenanceImp();
-        maint2.setMaintenance(mr2, s2, c2, problem2);
+        maint2.setMaintenance(2, mr2, s2, c2, problem2);
 
         //Create Maintenance Manangement
         MaintenanceManangement mm = new MaintenanceManangementImp();
@@ -188,6 +193,33 @@ public class mainapp {
         System.out.println(use_three);
 
 
+        System.out.println("\n\n\n");
+        System.out.println("Now we are using Builder pattern for Maintenance.");
+        MaintenanceBuilder maintBuilder = new MaintenanceBuilder.Builder(5).withCost(c2).withMaintenanceRequest(mr2)
+                .withProblem(problem).withSchedule(s).build();
+
+        System.out.println(maintBuilder);
+
+
+        System.out.println("\n\n\n");
+        System.out.println("Now we are using Visitor pattern to calculate maintenance fee by calculate each item need to be fixed and labor fee.");
+        MaintenanceItemlizedCost mc1= new MaintenanceItemBlackboard(1, 50.35);
+        MaintenanceItemlizedCost mc2= new MaintenanceItemDesk(10, 20.10);
+        MaintenanceItemlizedCost mc3= new MaintenanceItemLight(8,3.5);
+
+        ArrayList<MaintenanceItemlizedCost> items = new ArrayList<>();
+        items.add(mc1);
+        items.add(mc2);
+        items.add(mc3);
+
+        Maintenance maint5 = new MaintenanceImp();
+        maint5.setCostByItems(items);
+        maint5.setMaintID(10);
+        maint5.setRequest(mr2);
+        maint5.addProbelmComment(problem2);
+        maint5.setSchedule(s_three);
+
+        System.out.println(maint5);
 
 
     }

@@ -28,7 +28,7 @@ class MaintenanceTest {
         String ProblemComment = "ProblemComment";
         double cost = 0.00;
         Maintenance maintenance = new MaintenanceImp();
-        maintenance.setMaintenance(r, s, cost, ProblemComment);
+        maintenance.setMaintenance(1, r, s, cost, ProblemComment);
         Assert.assertEquals(cost, maintenance.getCost());
         Assert.assertEquals(r, maintenance.getRequest());
         Assert.assertEquals(s, maintenance.getSchedule());
@@ -47,7 +47,7 @@ class MaintenanceTest {
         String ProblemComment = "ProblemComment";
         double cost = 0.00;
         Maintenance maintenance = new MaintenanceImp();
-        maintenance.setMaintenance(r, s, cost, ProblemComment);
+        maintenance.setMaintenance(1, r, s, cost, ProblemComment);
 
         // Next step is to print out the result, add it to a static string, then compare dynamically
         // in the test what we see from interactive use
@@ -76,7 +76,7 @@ class MaintenanceTest {
         String ProblemComment = "ProblemComment";
         double cost = 0.00;
         Maintenance maintenance = new MaintenanceImp();
-        maintenance.setMaintenance(r, s, cost, ProblemComment);
+        maintenance.setMaintenance(1, r, s, cost, ProblemComment);
 
         Assert.assertEquals(s, maintenance.getSchedule());
     }
